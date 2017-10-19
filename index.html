@@ -1,125 +1,193 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>TINA.Re - System</title>
+	<link href="sous/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sous/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="sous/css/animate.css" rel="stylesheet">
+    <link href="sous/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="sous/css/login.css" rel="stylesheet">
+	<style type="text/css">
+		body{margin: 0; padding: 0; overflow: hidden;}
+		#canvas {top: 0;left: 0;width: 100vw;height: 100vh;}
+		.signinpanel {width: 580px;left: 54%; top: 48%;}
+		.leftMenu {width: 300px; height: 100%; left: 0; top: 0; z-index: 99999; position: absolute; background-color: rgba(255,255,255,0.9); padding-left: 20px; }
+		.wkitems a{font-size: 12px!important; padding: 15px 0px 0px 0px!important;}
+		.tlt {color: red; }
+		.tltb {font-weight: 500;}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<svg class="hidden">
+		<symbol id="icon-arrow" viewBox="0 0 24 24">
+			<title>arrow</title>
+			<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+		</symbol>
+		<symbol id="icon-drop" viewBox="0 0 24 24">
+			<title>drop</title>
+			<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+			<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+		</symbol>
+	</svg>
 
-	<head>
-		<meta charset="utf-8">
+	<div class="leftMenu ">
+		<h2><span class="tlt tltb">TINA.Re</span> / <span class="tlt">System</span></h2>
+		<ul class="nav nav-pills nav-stacked">
+			<li><a href="#">Start / 索引</a></li>
 
-		<title>Meny - A three dimensional and space efficient menu concept</title>
+			<li class="active"><a href="#">MDB / 媒资库</a></li>
+			<li><a href="#">MDS / 数据</a></li>
+			<li><a href="#">COS / 运营</a></li>
+			<li><a href="#">CAS / 审核</a></li>
+			<li><a href="#">OTS / 交易</a></li>
+			<li><a href="#">RPS / 推荐</a></li>
+			<li><a href="#">USS / 客服</a></li>
+			<li><a href="#">OMS / 运维</a></li>
 
-		<meta name="description" content="A three dimensional and space efficient menu created with JavaScript and CSS 3.">
-		<meta name="author" content="Hakim El Hattab">
+		</ul>
+	</div>
 
-		<meta name="viewport" content="width=800, user-scalable=no">
+	<div class="signinpanel animated fadeInDown text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    <!--div class="sk-spinner sk-spinner-double-bounce">
+                        <div class="sk-double-bounce1"></div>
+                        <div class="sk-double-bounce2"></div>
+                    </div-->
+                    <div class="sk-spinner sk-spinner-chasing-dots">
+                        <div class="sk-dot1"></div>
+                        <div class="sk-dot2"></div>
+                    </div>
+                    <br/><br/>
 
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+                    <h2 class="no-margins tltb">欢迎访问 MDB 项目协作平台</h2>
+                    <p class="m-t-md"><i class="fa fa-database"></i> 天籁媒体资源管理平台</p>
 
-		<link rel="stylesheet" href="css/demo.css">
-	</head>
+                    <div class="wkitems">
+	                    <a href="#" target="_blank" class="btn btn-primary btn-circle btn-lg" type="button" title="CPS核心原型">PRD</a>&nbsp;&nbsp;
+	                    <a href="#" target="_blank" class="btn btn-info btn-circle btn-lg" type="button" title="CPS信息结构">UML</a>&nbsp;&nbsp;
+	                    <a href="#" target="_blank" class="btn btn-success btn-circle btn-lg" type="button" title="CPS演示代码-入口1">Login</a>&nbsp;&nbsp;
+	                    <a href="#" target="_blank" class="btn btn-success btn-circle btn-lg" type="button" title="CPS演示代码-主页">Home</a>&nbsp;&nbsp;
+	                    <a href="#" target="_blank" class="btn btn-warning btn-circle btn-lg" type="button" title="中文开发工具包">Tools</a>
+                    </div>
 
-	<body>
+                    <div class="signup-footer ">
+			            <div class="text-center">
+			                <p><i class="fa fa-copyright"></i> TINA.Re MDB v1.0</p>
+			                <p><a href="mailto:ran.bei@tlkg.com?cc=pm@tlkg.com&subject=【CPS】联通TV音乐中心CP运营平台&body=有关【联通TV音乐中心增值服务CP运营平台】项目问题如下：" title="马上给我反馈" class="btn btn-danger btn-xs"><i class="fa fa-envelope"></i> 反馈</a></p>
+			                <br/>
+			                <p><i class="fa fa-code-fork"></i> 2017-10-19 18:29:58 <small>产品组研发</small><br/><i class="fa fa-user"></i> <small>Skyfire At Beijing P.R.China</small></p>
+			            </div>
+			        </div>
+                </form>
 
-		<div class="meny">
-			<h2>More Experiments</h2>
-			<ul>
-				<li><a href="http://lab.hakim.se/avgrund/">Avgrund</a></li>
-				<li><a href="http://lab.hakim.se/radar/">Radar</a></li>
-				<li><a href="http://lab.hakim.se/forkit-js/">forkit.js</a></li>
-				<li><a href="http://lab.hakim.se/scroll-effects/">stroll.js</a></li>
-				<li><a href="http://lab.hakim.se/zoom-js">zoom.js</a></li>
-				<li><a href="http://lab.hakim.se/reveal-js">reveal.js</a></li>
-				<li><a href="http://itunes.apple.com/us/app/sinuous/id543097218">Sinuous for iOS</a></li>
-				<li><a href="http://hakim.se/experiments/css/domtree/">DOM Tree</a></li>
-				<li><a href="http://hakim.se/experiments/css/holobox/">Holobox</a></li>
-				<li><a href="http://hakim.se/experiments/html5/404/netmag.html">404</a></li>
-			</ul>
-		</div>
+            </div>
+        </div>
 
-		<div class="meny-arrow"></div>
+    </div>
 
-		<div class="contents">
-			<article>
-				<h1>Meny</h1>
-				<p>
-					A three dimensional and space efficient menu.
-				</p>
-				<p>
-					Move your mouse towards the arrow &mdash; or swipe in from the arrow if you're on a touch device &mdash; to open.
-					Test it with any page by appending a URL, like so: <a href="http://lab.hakim.se/meny/?u=http://hakim.se">lab.hakim.se/meny/?u=http://hakim.se.</a>
-				</p>
-				<p>
-					Meny can be positioned on any side of the screen: <br>
-					 <a href="http://lab.hakim.se/meny/?p=top">top</a>
-					 - <a href="http://lab.hakim.se/meny/?p=right">right</a>
-					 - <a href="http://lab.hakim.se/meny/?p=bottom">bottom</a>
-					 - <a href="http://lab.hakim.se/meny/?p=left">left</a>
-				</p>
-				<p>
-					Instructions and download at <a href="http://github.com/hakimel/meny">github.com/hakimel/meny</a>.
-				</p>
-				<p>
-					The name, <em>Meny</em>, is swedish.
-				</p>
-				<small>
-					Created by <a href="http://twitter.com/hakimel">@hakimel</a> / <a href="http://hakim.se/">http://hakim.se</a>
-				</small>
-			</article>
+    <script type="text/javascript" src="sous/js/login_bg4_reg.js"></script>
 
-			<div class="sharing">
-				<a href="http://twitter.com/share" class="twitter-share-button" data-text="Meny - a three dimensional and space efficient menu concept by @hakimel" data-url="http://lab.hakim.se/meny" data-count="small" data-related="hakimel"></a>
+	<script type="x-shader/x-fragment" id="fragmentShader">
+	#define TWO_PI 6.2831853072
+	#define PI 3.14159265359
 
-				<iframe id="facebook-button" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flab.hakim.se%2Fmeny%2F&layout=button_count&show_faces=false&width=83&action=like&font=arial&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:24px; position: relative; top: 4px;" allowTransparency="true"></iframe>
-			</div>
+	precision highp float;
 
-			<a href="https://github.com/hakimel/meny"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
-		</div>
+	uniform float globaltime;
+	uniform vec2 resolution;
+	uniform float aspect;
+	uniform float scroll;
+	uniform float velocity;
 
-		<script src="js/meny.js"></script>
-		<script>
-			// Create an instance of Meny
-			var meny = Meny.create({
-				// The element that will be animated in from off screen
-				menuElement: document.querySelector( '.meny' ),
+	const float timescale = 0.15;
+	const float displace = 0.03;
+	const float gridSize = 20.0;
+	const int layers = 3;
+	const float detail = 2.0;
+	const float wave = 1.0;
 
-				// The contents that gets pushed aside while Meny is active
-				contentsElement: document.querySelector( '.contents' ),
+	vec2 rotate(vec2 v, float angle) {
+		float c = cos(angle);
+		float s = sin(angle);
+		return v * mat2(c, -s, s, c);
+	}
 
-				// [optional] The alignment of the menu (top/right/bottom/left)
-				position: Meny.getQuery().p || 'left',
+	vec3 coordToHex(vec2 coord, float scale, float angle) {
+		vec2 c = rotate(coord, angle);
+		float q = (1.0 / 3.0 * sqrt(3.0) * c.x - 1.0 / 3.0 * c.y) * scale;
+		float r = 2.0 / 3.0 * c.y * scale;
+		return vec3(q, r, -q - r);
+	}
 
-				// [optional] The height of the menu (when using top/bottom position)
-				height: 200,
+	vec3 hexToCell(vec3 hex, float m) {
+		return fract(hex / m) * 2.0 - 1.0;
+	}
 
-				// [optional] The width of the menu (when using left/right position)
-				width: 260,
+	float absMax(vec3 v) {
+		return max(max(abs(v.x), abs(v.y)), abs(v.z));
+	}
 
-				// [optional] Distance from mouse (in pixels) when menu should open
-				threshold: 40,
+	float nsin(float value) {
+		return sin(value * TWO_PI) * 0.5 + 0.5;
+	}
 
-				// [optional] Use mouse movement to automatically open/close
-				mouse: true,
+	float hexToFloat(vec3 hex, float amt) {
+		return mix(absMax(hex), 1.0 - length(hex) / sqrt(3.0), amt);
+	}
 
-				// [optional] Use touch swipe events to open/close
-				touch: true
-			});
+	float calc(vec3 hex, float time, float len) {
+		float value = 0.0;
 
-			// API Methods:
-			// meny.open();
-			// meny.close();
-			// meny.isOpen();
+		for (int i = 0; i < layers; i++) {
+			vec3 cell = hexToCell(hex, 1.0 + float(i));
+			value += nsin(
+				hexToFloat(
+					cell,
+					nsin(len * wave + time + float(i) / float(layers))
+				) * detail + nsin(time * 0.5)
+			);
+		}
 
-			// Events:
-			// meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
-			// meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+		return value / float(layers);
+	}
 
-			// Embed an iframe if a URL is passed in
-			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
-				var contents = document.querySelector( '.contents' );
-				contents.style.padding = '0px';
-				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
-			}
-		</script>
+	void main(void) {
+		vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5) * vec2(aspect, 1.0) * 2.0;
+		float time = globaltime * timescale - scroll;
+		float invScroll = 1.0 - scroll;
+		float rgb[3];
+		float len = 1.0 - length(tx) * 0.3;
+		float zoom = nsin(time * 0.1) + len * velocity * 3.0;
+		float angle = TWO_PI * nsin(time * 0.05) + PI * len * scroll;
+		vec3 hex = coordToHex(tx, gridSize * zoom, angle);
 
-		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		for (int i = 0; i < 3; i++) {
+			float time2 = time + float(i) * displace * invScroll;
+			rgb[i] = pow(calc(hex, time2, len), 3.0) * (0.2 + 0.8 * sin(PI * len * 0.5));
+		}
 
-	</body>
-</html>
+		gl_FragColor = vec4(
+			rgb[0] * (1.0 - scroll * 0.2),
+			rgb[1] * invScroll,
+			(rgb[2] + 0.2) * invScroll,
+			1.0
+		);
+	}
+	</script>
+	<script type="text/javascript" src="sous/js/login_bg4.js"></script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?e71853fda5d3fc61f5435498ae18e618";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+</body></html>

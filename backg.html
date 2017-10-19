@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>Skyfire - 欢迎！</title>
+	<link href="sous/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sous/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="sous/css/animate.css" rel="stylesheet">
+    <link href="sous/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="sous/css/login.css" rel="stylesheet">
+	<style type="text/css">
+		body{margin: 0; padding: 0; overflow: hidden;}
+		#canvas {top: 0;left: 0;width: 100vw;height: 100vh;}
+		.signinpanel {width: 580px;left: 44%; top: 48%;}
+		.wkitems a{font-size: 12px!important; padding: 15px 0px 0px 0px!important;}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<svg class="hidden">
+		<symbol id="icon-arrow" viewBox="0 0 24 24">
+			<title>arrow</title>
+			<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+		</symbol>
+		<symbol id="icon-drop" viewBox="0 0 24 24">
+			<title>drop</title>
+			<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+			<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+		</symbol>
+	</svg>
+
+	<div class="signinpanel animated fadeInDown text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    <!--div class="sk-spinner sk-spinner-double-bounce">
+                        <div class="sk-double-bounce1"></div>
+                        <div class="sk-double-bounce2"></div>
+                    </div-->
+                    <div class="sk-spinner sk-spinner-chasing-dots">
+                        <div class="sk-dot1"></div>
+                        <div class="sk-dot2"></div>
+                    </div>
+                    <br/><br/>
+
+                    <h2 class="no-margins">欢迎访问 CPS 项目协作平台</h2>
+                    <p class="m-t-md"><i class="fa fa-database"></i> 联通TV音乐中心增值服务CP运营平台</p>
+
+                    <div class="wkitems">
+	                    <a href="CPS_PRD_V1/index.html" target="_blank" class="btn btn-primary btn-circle btn-lg" type="button" title="CPS核心原型">PRD</a>&nbsp;&nbsp;
+	                    <a href="https://www.processon.com/view/link/590b1b7de4b014dc3ac8db19" target="_blank" class="btn btn-info btn-circle btn-lg" type="button" title="CPS信息结构">UML</a>&nbsp;&nbsp;
+	                    <a href="sous/login_v1.html" target="_blank" class="btn btn-success btn-circle btn-lg" type="button" title="CPS演示代码-入口1">Login</a>&nbsp;&nbsp;
+	                    <a href="sous/index.html" target="_blank" class="btn btn-success btn-circle btn-lg" type="button" title="CPS演示代码-主页">Home</a>&nbsp;&nbsp;
+	                    <a href="Dev_Tools/index.html" target="_blank" class="btn btn-warning btn-circle btn-lg" type="button" title="中文开发工具包">Tools</a>
+                    </div>
+
+                    <div class="signup-footer ">
+			            <div class="text-center">
+			                <p><i class="fa fa-copyright"></i> TINA CUCC CP CMS V1.0</p>
+			                <p><a href="mailto:ran.bei@tlkg.com?cc=pm@tlkg.com&subject=【CPS】联通TV音乐中心CP运营平台&body=有关【联通TV音乐中心增值服务CP运营平台】项目问题如下：" title="马上给我反馈" class="btn btn-danger btn-xs"><i class="fa fa-envelope"></i> 反馈意见</a></p>
+			                <br/>
+			                <p><i class="fa fa-code-fork"></i> 2017-5-21 23:34:17 <small>产品组研发</small><br/><i class="fa fa-user"></i> <small>Skyfire At Beijing P.R.China</small></p>
+			            </div>
+			        </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="sous/js/login_bg4_reg.js"></script>
+
+	<script type="x-shader/x-fragment" id="fragmentShader">
+	#define TWO_PI 6.2831853072
+	#define PI 3.14159265359
+
+	precision highp float;
+
+	uniform float globaltime;
+	uniform vec2 resolution;
+	uniform float aspect;
+	uniform float scroll;
+	uniform float velocity;
+
+	const float timescale = 0.15;
+	const float displace = 0.03;
+	const float gridSize = 20.0;
+	const int layers = 3;
+	const float detail = 2.0;
+	const float wave = 1.0;
+
+	vec2 rotate(vec2 v, float angle) {
+		float c = cos(angle);
+		float s = sin(angle);
+		return v * mat2(c, -s, s, c);
+	}
+
+	vec3 coordToHex(vec2 coord, float scale, float angle) {
+		vec2 c = rotate(coord, angle);
+		float q = (1.0 / 3.0 * sqrt(3.0) * c.x - 1.0 / 3.0 * c.y) * scale;
+		float r = 2.0 / 3.0 * c.y * scale;
+		return vec3(q, r, -q - r);
+	}
+
+	vec3 hexToCell(vec3 hex, float m) {
+		return fract(hex / m) * 2.0 - 1.0;
+	}
+
+	float absMax(vec3 v) {
+		return max(max(abs(v.x), abs(v.y)), abs(v.z));
+	}
+
+	float nsin(float value) {
+		return sin(value * TWO_PI) * 0.5 + 0.5;
+	}
+
+	float hexToFloat(vec3 hex, float amt) {
+		return mix(absMax(hex), 1.0 - length(hex) / sqrt(3.0), amt);
+	}
+
+	float calc(vec3 hex, float time, float len) {
+		float value = 0.0;
+
+		for (int i = 0; i < layers; i++) {
+			vec3 cell = hexToCell(hex, 1.0 + float(i));
+			value += nsin(
+				hexToFloat(
+					cell,
+					nsin(len * wave + time + float(i) / float(layers))
+				) * detail + nsin(time * 0.5)
+			);
+		}
+
+		return value / float(layers);
+	}
+
+	void main(void) {
+		vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5) * vec2(aspect, 1.0) * 2.0;
+		float time = globaltime * timescale - scroll;
+		float invScroll = 1.0 - scroll;
+		float rgb[3];
+		float len = 1.0 - length(tx) * 0.3;
+		float zoom = nsin(time * 0.1) + len * velocity * 3.0;
+		float angle = TWO_PI * nsin(time * 0.05) + PI * len * scroll;
+		vec3 hex = coordToHex(tx, gridSize * zoom, angle);
+
+		for (int i = 0; i < 3; i++) {
+			float time2 = time + float(i) * displace * invScroll;
+			rgb[i] = pow(calc(hex, time2, len), 3.0) * (0.2 + 0.8 * sin(PI * len * 0.5));
+		}
+
+		gl_FragColor = vec4(
+			rgb[0] * (1.0 - scroll * 0.2),
+			rgb[1] * invScroll,
+			(rgb[2] + 0.2) * invScroll,
+			1.0
+		);
+	}
+	</script>
+	<script type="text/javascript" src="sous/js/login_bg4.js"></script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?e71853fda5d3fc61f5435498ae18e618";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+</body></html>
