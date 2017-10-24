@@ -1,9 +1,9 @@
 
 
 .signinpanel {
-    width: 360px; 
+    width: 460px; 
     position: absolute; 
-    left: 50%; top: 50%;
+    left: 50%; top: 36%;
     z-index: 999;
     margin-top: -200px;    /* 高度的一半 */
     margin-left: -200px;    /* 宽度的一半 */

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>商城 - 编辑</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>编辑商品 <small>&nbsp;&nbsp;编辑时间：2017-05-05 18:30:32</small>&nbsp;&nbsp;<!--a class="J_menuItem btn btn-info btn-xs" href="tv_dgp_hty.html"><i class="fa fa-eye"></i> 历史版本</a--></h5>
+                        <div class="ibox-tools">
+                            
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row sortable-list connectList">
+                            <div class="col-sm-4">
+                                <img alt="image" class="img-responsive" src="img/p_big1.jpg" />
+                            </div>
+                            <div class="col-sm-4">
+                                <p>
+                                    <a href="form_shop_pic.html" class="J_menuItem btn btn-success btn-xs"><i class="fa fa-edit"></i> 编辑商品封面</a>
+                                </p>
+                                <p>
+                                   <label class="control-label">商品标题：</label>
+                                    <input id="firstname" name="firstname" class="form-control" type="text" value="配件商品名称示例">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入专题名称，字数在20个以内，可重复</span> 
+                                </p>
+                                <p>
+                                   <label class="control-label">商品价格：</label>
+                                    <input id="firstname" name="firstname" class="form-control" type="text" value="499">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入商品的销售价格</span> 
+                                </p>
+                                <p>
+                                   <label class="control-label">购买链接地址：</label>
+                                    <input id="firstname" name="firstname" class="form-control" type="text" value="http://wwww.taobao.com/sdsdsfdfgdhggh/dfdfg/fgdfgdh/sdfsf.xkiafg">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入本商品电视淘宝跳转链接</span> 
+                                </p>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">保存更改</button>
+                                        <button class="btn btn-white" type="submit">取消</button>
+                                </div>
+                            </div>
+                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity d data  -->
+    <script src="js/demo/peity-demo.js"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+
+            $('.demo3').click(function () {
+                swal({
+                    title: "您确定要保存所有已发布内容变更吗？",
+                    text: "修改后可提交审批，请查看详细资料后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确认并提交审批！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("修改排序提交审批成功！", "您已经提交了修改排序的运营审批请求。", "success");
+                    } else {
+                        swal("已取消", "您取消了保存运营内容修改的操作！", "error");
+                    }
+                });
+            });
+
+
+        });
+    </script>
+
+    
+    
+
+</body>
+
+</html>

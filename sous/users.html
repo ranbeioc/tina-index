@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 用户管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <span class="text-muted small pull-right">最后更新：<i class="fa fa-clock-o"></i> 2017-05-06 15:29:39</span>
+                        <h2>用户管理</h2>
+                        <p>
+                            所有用户必须通过身份审核与邮件验证
+                        </p>
+                        <div class="input-group">
+                            <input type="text" placeholder="查找用户" class="input form-control">
+                            <span class="input-group-btn">
+                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> 搜索</button>
+                                </span>
+                        </div>
+                        <div class="clients-list">
+                            <ul class="nav nav-tabs">
+                                <span class="pull-right small text-muted">5 个用户</span>
+                                <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> 用户</a>
+                                </li>
+                                <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> 角色</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>用户</th>
+                                                        <th>所属公司</th>
+                                                        <th>联系电话</th>
+                                                        <th>邮件地址</th>
+                                                        <th>用户角色</th>
+                                                        <th>运营版块</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>001</td>
+                                                        <td><img alt="image" src="img/a1.jpg" class="client-avatar img-circle"> <a href="#.html" class="J_menuItem">技术运维部</a></td>
+                                                        <td>天籁传音数字技术有限公司</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-danger">超级管理员</span>
+                                                        </td>
+                                                        <td><span class="label label-success">全平台</span>
+                                                        </td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#.html#" class="btn btn-white btn-sm" disabled="disabled"> 详情 </a>
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo4" disabled="disabled"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>002</td>
+                                                        <td><img alt="image" src="img/a3.jpg" class="client-avatar img-circle"> <a href="profile.html" class="J_menuItem">天籁曲库管理员1</a></td>
+                                                        <td>天籁传音数字技术有限公司</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654321</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-danger">综合管理员</span>
+                                                        </td>
+                                                        <td><span class="label label-success">全平台</span>
+                                                        </td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="profile.html" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo4" disabled="disabled"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>003</td>
+                                                        <td><img alt="image" src="img/a5.jpg" class="client-avatar img-circle"> <a href="profile3.html" class="J_menuItem">移动端管理员</a></td>
+                                                        <td>天籁传音数字技术有限公司</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-danger">分部管理员</span>
+                                                        </td>
+                                                        <td><span class="label label-success">移动端</span>
+                                                        </td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="profile3.html" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo4"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>004</td>
+                                                        <td><img alt="image" src="img/a7.jpg" class="client-avatar img-circle"> <a href="profile1.html" class="J_menuItem">电视端管理员</a></td>
+                                                        <td>天籁传音数字技术有限公司</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-89076543</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-danger">分部管理员</span>
+                                                        </td>
+                                                        <td><span class="label label-success">电视端</span>
+                                                        </td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="profile1.html" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo4"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>005</td>
+                                                        <td><img alt="image" src="img/a4.jpg" class="client-avatar img-circle"> <a href="profile2.html" class="J_menuItem">KTV端管理员</a></td>
+                                                        <td>天籁传音数字技术有限公司</td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-danger">分部管理员</span>
+                                                        </td>
+                                                        <td><span class="label label-success">KTV</span>
+                                                        </td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="profile2.html" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo4"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>角色名称</th>
+                                                        <th>角色类型</th>
+                                                        <th>联系电话</th>
+                                                        <th>邮件地址</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>0001</td>
+                                                        <td>运维管理员</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">超级管理员</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654321</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo5" disabled="disabled"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0002</td>
+                                                        <td>曲库管理员</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">综合管理员</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0003</td>
+                                                        <td>移动端管理员</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">分部管理员</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0004</td>
+                                                        <td>电视端管理员</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">分部管理员</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0005</td>
+                                                        <td>KTV端管理员</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">分部管理员</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a class="btn btn-success btn-sm demo3" disabled="disabled"> 激活 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 冻结 </a>
+                                                        </td>
+                                                    </tr>
+                                                
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.full-height-scroll').slimScroll({
+                height: '100%'
+            });
+
+            $('.demo3').click(function () {
+                swal({
+                    title: "您确定要激活该用户账户吗",
+                    text: "激活后可登录系统管理运营内容，请验证资料后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "我要激活！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("激活成功！", "您已经激活了该用户账户。", "success");
+                    } else {
+                        swal("已取消", "您取消了激活账户操作！", "error");
+                    }
+                });
+            });
+
+            $('.demo4').click(function () {
+                swal({
+                    title: "您确定要冻结该用户账户吗",
+                    text: "冻结后将无法登录系统管理运营内容，请谨慎操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "我要冻结！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("冻结成功！", "您已经冻结了该用户账户。", "success");
+                    } else {
+                        swal("已取消", "您取消了冻结账户操作！", "error");
+                    }
+                });
+            });
+
+            $('.demo5').click(function () {
+                swal({
+                    title: "您确定要冻结该公司所有账户吗",
+                    text: "冻结后将无法登录系统管理运营内容，请谨慎操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "我要冻结！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("冻结成功！", "您已经冻结了该公司所有用户账户。", "success");
+                    } else {
+                        swal("已取消", "您取消了冻结公司账户操作！", "error");
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    
+    
+
+</body>
+
+</html>

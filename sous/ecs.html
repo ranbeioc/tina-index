@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 百度ECHarts</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/datapicker/daterangepicker.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+
+        <div class="row" style="display: none;">
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>饼状图</h5>
+                        <div class="ibox-tools">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="typography.html#" aria-expanded="false">
+                                 全部版本 <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">V1.0</a>
+                                </li>
+                                <li><a href="#">V2.0</a>
+                                </li>
+                                <li><a href="#">V3.0</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-pie-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>雷达图</h5>
+                        <div class="ibox-tools">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="typography.html#" aria-expanded="false">
+                                 全部版本 <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">V1.0</a>
+                                </li>
+                                <li><a href="#">V2.0</a>
+                                </li>
+                                <li><a href="#">V3.0</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-radar-chart"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>区域图</h5>
+                        <div class="ibox-tools">
+                             <a class="dropdown-toggle" data-toggle="dropdown" href="typography.html#" aria-expanded="false">
+                                 全部版本 <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">V1.0</a>
+                                </li>
+                                <li><a href="#">V2.0</a>
+                                </li>
+                                <li><a href="#">V3.0</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="reportrange" class="pull-right dpimput">
+                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                            <span>2017-04-01 - 2017-04-30</span> <b class="caret"></b>
+                          </div>
+                        <div style="height:600px" id="echarts-map-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>多维图</h5>
+                        <div class="ibox-tools">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="typography.html#" aria-expanded="false">
+                                 全部版本 <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">V1.0</a>
+                                </li>
+                                <li><a href="#">V2.0</a>
+                                </li>
+                                <li><a href="#">V3.0</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="reportrange" class="pull-right dpimput">
+                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                            <span>2017-04-01 - 2017-04-30</span> <b class="caret"></b>
+                          </div>
+                        <div id="main" class="echarts"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>折线图</h5>
+                        <div class="ibox-tools">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="typography.html#" aria-expanded="false">
+                                 全部版本 <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">V1.0</a>
+                                </li>
+                                <li><a href="#">V2.0</a>
+                                </li>
+                                <li><a href="#">V3.0</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="reportrange" class="pull-right dpimput">
+                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                            <span>2017-04-01 - 2017-04-30</span> <b class="caret"></b>
+                          </div>
+                        <div id="main2" class="echarts"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+        <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!-- ECharts -->
+    <script src="js/plugins/echarts/echarts-all.js"></script>
+
+    <!-- ECharts demo data -->
+    <script src="js/demo/echarts-demo.js"></script>
+
+    
+
+    
+    
+
+</body>
+
+</html>

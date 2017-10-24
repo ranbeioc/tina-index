@@ -3,8 +3,8 @@ $(function () {
     var pieChart = echarts.init(document.getElementById("echarts-pie-chart"));
     var pieoption = {
         title : {
-            text: '各CP投放内容分布',
-            subtext: '根据实际投放资源数',
+            text: '各CP栏目内容分布',
+            subtext: '根据实际访问资源数',
             x:'center'
         },
         tooltip : {
@@ -14,7 +14,7 @@ $(function () {
         legend: {
             orient : 'vertical',
             x : 'left',
-            data:['CP-天籁(看)','CP-路通(唱)','CP-道然(听)']
+            data:['歌手','歌曲','排行']
         },
         calculable : true,
         series : [
@@ -89,7 +89,7 @@ $(function () {
     var mapChart = echarts.init(document.getElementById("echarts-map-chart"));
     var mapoption = {
         title : {
-            text: '各CP内容省份访问分布(近30天)',
+            text: '各板块内容省份访问分布(近30天)',
             subtext: '根据各省份对各个版块访问数据统计',
             x:'center'
         },
@@ -99,7 +99,7 @@ $(function () {
         legend: {
             orient: 'vertical',
             x:'left',
-            data:['CP-天籁(看)','CP-路通(唱)','CP-道然(听)']
+            data:['歌手','歌曲','榜单']
         },
         dataRange: {
             min: 0,
@@ -130,7 +130,7 @@ $(function () {
         },
         series : [
             {
-                name: 'CP-天籁(看)',
+                name: '歌手',
                 type: 'map',
                 mapType: 'china',
                 roam: false,
@@ -176,7 +176,7 @@ $(function () {
                 ]
             },
             {
-                name: 'CP-路通(唱)',
+                name: '歌曲',
                 type: 'map',
                 mapType: 'china',
                 itemStyle:{
@@ -206,7 +206,7 @@ $(function () {
                 ]
             },
             {
-                name: 'CP-道然(听)',
+                name: '榜单',
                 type: 'map',
                 mapType: 'china',
                 itemStyle:{
@@ -250,7 +250,7 @@ $(function () {
     };
     var duleoption = {
         title: {
-            text: '各CP投放栏目访问对比(近30天)',
+            text: '各栏目TOP3访问对比(近30天)',
             subtext: '根据所有栏目访问数统计'
         },
         tooltip : {
@@ -290,7 +290,7 @@ $(function () {
             {
                 type : 'category',
                 splitLine: {show: false},
-                data : ['CP-天籁(看)','CP-路通(唱)','CP-道然(听)']
+                data : ['TOP3','TOP2','TOP1']
             }
         ],
         series : [

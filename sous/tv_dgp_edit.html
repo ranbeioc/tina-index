@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>专题 - 编辑</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>编辑专题/歌单/榜单 <small>&nbsp;&nbsp;编辑时间：2017-05-05 18:30:32</small>&nbsp;&nbsp;<a class="J_menuItem btn btn-info btn-xs" href="tv_dgp_hty.html"><i class="fa fa-eye"></i> 历史版本</a></h5>
+                        <div class="ibox-tools">
+
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row sortable-list connectList">
+                            <div class="col-sm-4">
+                                <img alt="image" class="img-responsive" src="img/p_big2.jpg" />
+                            </div>
+                            <div class="col-sm-4">
+                                <p>
+                                   <label class="control-label">添加现有专题/歌单/榜单到栏目：</label>
+                                    <select class="form-control m-b" id="" name="" type="text" aria-required="true" aria-invalid="true" class="error">
+                                        <option>请选择关联类型</option>
+                                        <option value="0">专题</option>
+                                        <option value="1">歌单</option>
+                                        <option value="2">榜单</option>
+                                    </select>
+                                    <select class="form-control m-b" id="" name="" type="text" aria-required="true" aria-invalid="true" class="error">
+                                        <option>请选择关联类型</option>
+                                        <option value="0">子集列表1</option>
+                                        <option value="1">子集列表2</option>
+                                        <option value="2">子集列表3</option>
+                                        <option value="3">子集列表4</option>
+                                        <option value="4">子集列表5</option>
+                                        <option value="5">子集列表6</option>
+                                    </select>
+                                    
+                                </p>
+                                <p>
+                                    <a href="form_dgp_pic.html" class="J_menuItem btn btn-success btn-xs"><i class="fa fa-eye"></i> 编辑专题/歌单/榜单封面</a>
+                                </p>
+                                <p>
+                                   <label class="control-label">专题/歌单/榜单标题：</label>
+                                    <input id="firstname" name="firstname" class="form-control" type="text" value="专题标题名称示例">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入专题/歌单/榜单名称，字数在20个以内，可重复</span>
+                                </p>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">保存更改</button>
+                                        <button class="btn btn-white" type="submit">取消</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="tabs-container">
+              <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 当前歌曲</a>
+                  </li>
+                  <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false"> 查询歌曲</a>
+                  </li>
+              </ul>
+              <div class="tab-content">
+                  <div id="tab-1" class="tab-pane active">
+                      <div class="panel-body">
+                        <div class="col-sm-12">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>
+                                        <span>当前专题/歌单/榜单内歌曲（200）</span>
+                                    </h5>
+                                    <div class="ibox-tools">
+                                        <!--label class="label label-primary">可拖动单元格排序</label-->
+                                        <a class="btn btn-success btn-xs demo3"><i class="fa fa-save"></i> 保存更改</a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+
+                                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>排序</th>
+                                                <th>歌曲编号</th>
+                                                <th>歌曲与歌手名称</th>
+                                                <th>总推荐时间</th>
+                                                <th>总点击量</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="sortable-list connectList">
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>34667</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>54645</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>978043</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>98045</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>78934</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例-歌手名称</td>
+                                                <th>15天</th>
+                                                <th>234554</th>
+                                                <th>
+                                                    <a class="btn btn-info btn-sm demo5"> 替换 </a>
+                                                    <a class="btn btn-danger btn-sm demo4"> 删除 </a>
+                                                </th>
+                                            </tr>
+
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>排序</th>
+                                                <th>歌曲编号</th>
+                                                <th>歌曲与歌手名称</th>
+                                                <th>总推荐时间</th>
+                                                <th>总点击量</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <p><p class="text-primary">提示：可上下拖动单行表格排序</p></p>
+
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div id="tab-2" class="tab-pane">
+                      <div class="panel-body">
+                        <div class="col-sm-12">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>查询歌曲编号</h5>
+                                    <div class="ibox-tools">
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row m-b-sm m-t-sm">
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <input type="text" placeholder="请输入歌手名称查询" class="input-sm form-control"> <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-hover ">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>歌曲编号</th>
+                                                <th>歌曲名称</th>
+                                                <th>歌手头像</th>
+                                                <th>歌手名称</th>
+                                                <th>曲目类型</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class=" sortable-list connectList">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a1.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a8.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-info">免费
+                                                </span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a9.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a2.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a4.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a1.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a8.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a9.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a2.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a4.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a2.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>12345678</td>
+                                                <td>歌曲名称标题示例</td>
+                                                <td><img alt="image" class=" m-t-xs img-tin img-responsive" src="img/a4.jpg"></td>
+                                                <td>歌手名称示例</td>
+                                                <td>
+                                                    <span class="label label-warning">会员</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning btn-sm demo"> 添加 </a>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </tbody>
+                                    </table>
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-white" disabled="disabled"><i class="fa fa-chevron-left"></i>
+                                        </button>
+                                        <button class="btn btn-white active">1</button>
+                                        <button class="btn btn-white">2</button>
+                                        <label class="btn btn-white" disabled="disabled">...</label>
+                                        <button class="btn btn-white">11</button>
+                                        <button class="btn btn-white">12</button>
+                                        <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity d data  -->
+    <script src="js/demo/peity-demo.js"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+
+            $('.demo3').click(function () {
+                swal({
+                    title: "您确定要保存所有已发布内容变更吗？",
+                    text: "修改后可提交审批，请查看详细资料后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确认并提交审批！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("修改排序提交审批成功！", "您已经提交了修改排序的运营审批请求。", "success");
+                    } else {
+                        swal("已取消", "您取消了保存运营内容修改的操作！", "error");
+                    }
+                });
+            });
+
+            $('.demo4').click(function () {
+                swal({
+                    title: "您确定要删除该运营内容吗？",
+                    text: "删除后不可恢复，请谨慎操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "立即删除！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("删除成功！", "您已经删除该运营内容。", "success");
+                    } else {
+                        swal("已取消", "您取消了删除本地运营内容操作！", "error");
+                    }
+                });
+            });
+
+
+            $('.demo5').click(function () {
+                swal({
+                    title: "请输入推荐歌曲的编号",
+                    text: '您可以在歌手列表中查询歌曲编号信息',
+                    type: 'input',
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    confirmButtonText: "确定",
+                    cancelButtonText: "取消",
+                    animation: "slide-from-top",
+                    inputPlaceholder: "请输入新推荐歌曲的编号",
+                },
+                function(inputValue, isConfirm){
+                    if (inputValue === false) return false;
+
+                    if (inputValue === "") {
+                        swal.showInputError("请输入新推荐歌曲的编号!");
+                        return false;
+                    };
+
+                    //swal("Nice!", 'You wrote: ' + inputValue, "success");
+                    swal("修改成功！", "您已经本地修改了替换该发布的内容。", "success");
+
+                });
+            });
+
+            $('.demo').click(function () {
+                swal({
+                    title: "添加成功",
+                    text: "已成功添加到专题曲目内顶部",
+                    type: "success"
+                });
+            });
+
+            $('.dataTables-example').dataTable();
+
+            $(".sortable-list").sortable({
+                connectWith: ".connectList"
+            }).disableSelection();
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

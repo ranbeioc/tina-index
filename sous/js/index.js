@@ -6,4 +6,12 @@ $(function(){
         $("#J_iframe").attr('src',url);
         return false;
     });
+
+    $(".J_menuItem").each(function () {
+    	var t = $(this).attr('href').length > 0 ? true : false;
+    	if(!t){
+    		$(this).parent().addClass('disabled');
+    	};
+    });
+    
 });

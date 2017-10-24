@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title> - 主页示例</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row row-sm text-center">
+                            
+                            <div class="col-sm-3">
+                                <div class="widget style1 navy-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-paper-plane fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 已发送报表数 </span>
+                                            <h2 class="font-bold">82</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="widget style1 yellow-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-clock-o fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 排队中报表数 </span>
+                                            <h2 class="font-bold">15</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="widget style1 lazur-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-users fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 总订阅用户数 </span>
+                                            <h2 class="font-bold">23</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="widget style1 navy-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-table fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 总报表数 </span>
+                                            <h2 class="font-bold">356</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 所有报表</a>
+                            </li>
+                            <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false"> 排队中</a>
+                            </li>
+                            <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false"> 已发送</a>
+                            </li>
+                            <li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="false"> 已取消</a>
+                            </li>
+                            <li class="pull-right">
+                                <a href="report_add.html" class="btn btn-success J_menuItem">创建新报表</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+
+                                    <div class="col-sm-12">
+                                        <div class="ibox">
+                                            <div class="ibox-title">
+                                                <h5>订阅报表列表</h5>
+
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="row m-b-sm m-t-sm">
+                                                    <div class="col-md-1">
+                                                        <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="input-group">
+                                                            <input type="text" placeholder="请输入报表名称" class="input-sm form-control"> <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="project-list">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <th>状态</th>
+                                                            <th>报表标题</th>
+                                                            <th>平台</th>
+                                                            <th>订阅者</th>
+                                                            <th>操作</th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">移动端
+                                                                </span>
+                                                                </td>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="report_detail.html" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo3"><i class="fa fa-download"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-warning">排队中
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">电视端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a7.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a6.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="report_detail.html" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo1"><i class="fa fa-close"></i> 取消 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-default">已取消
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">移动端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo2"><i class="fa fa-repeat"></i> 恢复 </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">移动端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a7.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo3"><i class="fa fa-download"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-warning">排队中
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">电视端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo1"><i class="fa fa-close"></i> 取消 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">KTV
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo3"><i class="fa fa-download"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">智能硬件
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a7.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a6.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo3"><i class="fa fa-close"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <div class="col-sm-12">
+                                        <div class="ibox">
+                                            <div class="ibox-title">
+                                                <h5>订阅报表列表</h5>
+
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="row m-b-sm m-t-sm">
+                                                    <div class="col-md-1">
+                                                        <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="input-group">
+                                                            <input type="text" placeholder="请输入报表名称" class="input-sm form-control"> <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="project-list">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <th>状态</th>
+                                                            <th>报表标题</th>
+                                                            <th>平台</th>
+                                                            <th>订阅者</th>
+                                                            <th>操作</th>
+                                                        </thead>
+                                                        <tbody>
+                                                 
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-warning">排队中
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">电视端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a7.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a6.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="report_detail.html" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo1"><i class="fa fa-close "></i> 取消 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+            
+                                              
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-warning">排队中
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">电视端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo1"><i class="fa fa-close"></i> 取消 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                       
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="tab-3" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <div class="col-sm-12">
+                                        <div class="ibox">
+                                            <div class="ibox-title">
+                                                <h5>订阅报表列表</h5>
+  
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="row m-b-sm m-t-sm">
+                                                    <div class="col-md-1">
+                                                        <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="input-group">
+                                                            <input type="text" placeholder="请输入报表名称" class="input-sm form-control"> <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="project-list">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <th>状态</th>
+                                                            <th>报表标题</th>
+                                                            <th>平台</th>
+                                                            <th>订阅者</th>
+                                                            <th>操作</th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">移动端
+                                                                </span>
+                                                                </td>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="report_detail.html" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo3"><i class="fa fa-download"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                 
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">移动端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a7.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo3"><i class="fa fa-download"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                           
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">KTV
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo3"><i class="fa fa-download"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-primary">已发送
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">智能硬件
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a7.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a6.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo3"><i class="fa fa-download"></i> 下载 </a>
+                                                                    <a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-rss"></i> 订阅 </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="tab-4" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <div class="col-sm-12">
+                                        <div class="ibox">
+                                            <div class="ibox-title">
+                                                <h5>订阅报表列表</h5>
+
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="row m-b-sm m-t-sm">
+                                                    <div class="col-md-1">
+                                                        <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="input-group">
+                                                            <input type="text" placeholder="请输入报表名称" class="input-sm form-control"> <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="project-list">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <th>状态</th>
+                                                            <th>报表标题</th>
+                                                            <th>平台</th>
+                                                            <th>订阅者</th>
+                                                            <th>操作</th>
+                                                        </thead>
+                                                        <tbody>
+                        
+                                                            <tr>
+                                                                <td class="project-status">
+                                                                    <span class="label label-default">已取消
+                                                                </span></td>
+                                                                <td class="project-title">
+                                                                    <a href="#">订阅报表：A板块数据</a>
+                                                                    <br>
+                                                                    <small>创建于 2017-10-23 23:15:26</small>
+                                                                </td>
+                                                                <td class="project-status">
+                                                                      <span class="label label-success">移动端
+                                                                </span>
+                                                                <td class="project-people">
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                                                    <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                                                </td>
+                                                                <td class="project-actions">
+                                                                    <a href="##" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                                                    <a href="##" class="btn btn-white btn-sm demo2"><i class="fa fa-repeat"></i> 恢复 </a>
+                                                                </td>
+                                                            </tr>
+                                              
+                                                        
+                                                       
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+
+            $('.demo1').click(function () {
+                swal({
+                    title: "您确定要取消该排队报表吗？",
+                    text: "取消后订阅用户将不再收取数据邮件通知，请查看详细资料后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "取消！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("取消成功！", "您已经取消了该报表。", "success");
+                    } else {
+                        swal("已撤销操作", "您取消了该操作！", "error");
+                    }
+                });
+            });
+
+            $('.demo2').click(function () {
+                swal({
+                    title: "您确定要恢复该报表吗？",
+                    text: "恢复后订阅用户将继续收取数据邮件通知！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "立即恢复！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("恢复成功！", "您已经恢复了该报表。", "success");
+                    } else {
+                        swal("已撤销操作", "您取消了该操作！", "error");
+                    }
+                });
+            });
+
+
+
+             $('.demo3').click(function () {
+                swal({
+                    title: "您确定要下载该报表吗？",
+                    text: '我们将通过电邮发送数据报表到您的邮箱！',
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "发送到邮箱！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal({
+                          title: "发送到邮箱",
+                          text: "请输入您的接收邮箱地址:",
+                          type: "input",
+                          showCancelButton: true,
+                          closeOnConfirm: false,
+                          confirmButtonColor: "#DD6B55",
+                          confirmButtonText: "确认！",
+                          cancelButtonText: "取消",
+                          inputPlaceholder: "请输入您的接收邮箱地址"
+                        },
+                        function(inputValue){
+                          if (inputValue === false) return false;
+
+                          if (inputValue === "") {
+                            swal.showInputError("必须填写正确的邮箱地址");
+                            return false
+                          }
+
+                          swal("操作成功！", "我们将在10分钟内发送报表到您的邮箱", "success");
+                        });
+
+                    } else {
+                        swal("已取消操作", "您取消了下载操作！", "error");
+                    }
+                });
+            });
+
+             $('.demo4').click(function () {
+                swal({
+                    title: "您确定要订阅该报表吗？",
+                    text: "订阅后将定期收取数据邮件通知！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "立即订阅！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("订阅成功！", "您已经订阅了该报表。", "success");
+                    } else {
+                        swal("已撤销操作", "您取消了该操作！", "error");
+                    }
+                });
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

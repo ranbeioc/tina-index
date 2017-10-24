@@ -1,0 +1,1208 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 媒体资源管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>歌手列表</h5>
+                        <div class="ibox-tools">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="typography.html#" aria-expanded="false">
+                                 全部版本 <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">V1.0</a>
+                                </li>
+                                <li><a href="#">V2.0</a>
+                                </li>
+                                <li><a href="#">V3.0</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <span class="small pull-right">最后更新：<i class="fa fa-clock-o"></i> 2017-05-06 15:29:39 <button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-refresh"></i> 刷新</button></span>
+                        <h2>编目资源管理</h2>
+                        <p>
+                            通过实时同步联通媒体资源数据库
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-1 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                    <option value="0">移动端</option>
+                                    <option value="1">电视端</option>
+                                    <option value="2">KTV</option>
+                                    <option value="3">智能硬件</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                    <option value="0">全部分类</option>
+                                    <option value="1">大陆男歌手</option>
+                                    <option value="2">大陆女歌手</option>
+                                    <option value="3">大陆组合</option>
+                                    <option value="4">欧美歌手</option>
+                                    <option value="5">港台男歌手</option>
+                                    <option value="6">港台女歌手</option>
+                                    <option value="7">港台组合</option>
+                                    <option value="8">港台组合</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-1 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                    <option value="0">板块</option>
+                                    <option value="1">板块名称1</option>
+                                    <option value="2">板块名称2</option>
+                                    <option value="3">板块名称3</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-1 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                    <option value="0">栏目</option>
+                                    <option value="1">栏目名称1</option>
+                                    <option value="2">栏目名称2</option>
+                                    <option value="3">栏目名称3</option>
+                                    <option value="4">栏目名称4</option>
+                                    <option value="5">栏目名称5</option>
+                                    <option value="6">栏目名称5</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                    <option value="0">所有版权</option>
+                                    <option value="1">有版权标记</option>
+                                    <option value="2">无版权标记</option>
+                                    <option value="3">版权方A</option>
+                                    <option value="4">版权方B</option>
+                                    <option value="5">版权方C</option>
+                                    <option value="6">版权方D</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                    <option value="0">所有状态</option>
+                                    <option value="1">已上架</option>
+                                    <option value="2">已下架</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" placeholder="请输入歌手或歌曲名称查询" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>编号</th>
+                                                    <th>标题</th>
+                                                    <th>歌手</th>
+                                                    <th>入库日期</th>
+                                                    <th>所属分类</th>
+                                                    <th>权利人</th>
+                                                    <th>热度值</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称</td>
+                                                    <td>2017-05-06 17:13:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td>23556</td>
+                                                    <td>
+                                                        <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm demo1"> 下架 </a>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-white" disabled="disabled"><i class="fa fa-chevron-left"></i>
+                                </button>
+                                <button class="btn btn-white active">1</button>
+                                <button class="btn btn-white">2</button>
+                                <button class="btn btn-white">3</button>
+                                <button class="btn btn-white">4</button>
+                                <label class="btn btn-white" disabled="disabled">...</label>
+                                <button class="btn btn-white">5266</button>
+                                <button class="btn btn-white">5267</button>
+                                <button class="btn btn-white">5268</button>
+                                <button class="btn btn-white">5269</button>
+                                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑版权信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-6">
+<form class="form">
+                <div class="">
+                  <label>
+                    权利人
+                  </label>
+                </div>
+                <div class="form-group">
+                  <select class="select2_group form-control" style="width:200px;">
+                    <option value="0">请选择权利人</option>
+                    <optgroup label="权利人">
+                      <option value="1">权利人1</option>
+                      <option value="2">权利人2</option>
+                      <option value="3">权利人3</option>
+                      <option value="4">权利人4</option>
+                    </optgroup>
+                    <optgroup label="权利组织/公司">
+                      <option value="111">版权公司1</option>
+                      <option value="222">版权公司2</option>
+                      <option value="333">版权公司3</option>
+                      <option value="444">版权公司4</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+
+
+<div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked"> 作曲权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比" value="100%">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> 作词权
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="权利比">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 表演权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked="checked"> 复制权
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="权利比" value="100%">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 邻接权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked="checked"> 原画权
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="权利比" value="100%">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 网络传播权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+ 
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left"  data-dismiss="modal" data-toggle="modal" data-target="#exampleModal4" >版权历史</button>
+        <button type="button" class="btn btn-default pull-left"  data-dismiss="modal" data-toggle="modal" data-target="#exampleModal2" >编辑权利人</button>
+
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑版权信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-6">
+<form class="form">
+                <div class="">
+                  <label>
+                    权利人
+                  </label>
+                </div>
+                <div class="form-group">
+                  <select class="select2_group form-control" style="width:200px;">
+                    <option value="0">请选择权利人</option>
+                    <optgroup label="权利人">
+                      <option value="1">权利人1</option>
+                      <option value="2">权利人2</option>
+                      <option value="3">权利人3</option>
+                      <option value="4">权利人4</option>
+                    </optgroup>
+                    <optgroup label="权利组织/公司">
+                      <option value="111">版权公司1</option>
+                      <option value="222">版权公司2</option>
+                      <option value="333">版权公司3</option>
+                      <option value="444">版权公司4</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="">
+                <label>
+                  演唱者
+                </label>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="">
+                  <label>
+                   作曲者
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="">
+                <label>
+                  作词者
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑版权信息</h4>
+      </div>
+      <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>历史版本</th>
+                    <th>变更内容</th>
+                    <th>变更时间</th>
+                    <th>变更人</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        0001
+                    </td>
+                    <td>
+                       修改权利人为 音乐版权集团示例
+                    </td>
+                    <td>
+                        2017-10-24 04:47:58
+                    </td>
+                    <td>
+                       曲库管理员A
+                    </td>
+                </tr>    
+                <tr>
+                    <td>
+                        0002
+                    </td>
+                    <td>
+                       修改权利项为 网络传播权 100%
+                    </td>
+                    <td>
+                        2017-10-24 04:47:58
+                    </td>
+                    <td>
+                       曲库管理员A
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        0003
+                    </td>
+                    <td>
+                       修改权利项为 作曲者 姓名示例
+                    </td>
+                    <td>
+                        2017-10-24 04:47:58
+                    </td>
+                    <td>
+                       曲库管理员A
+                    </td>
+                </tr>    
+                 <tr>
+                    <td>
+                        0004
+                    </td>
+                    <td>
+                       修改权利项为 网络传播权 100%
+                    </td>
+                    <td>
+                        2017-10-24 04:47:58
+                    </td>
+                    <td>
+                       曲库管理员A
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        0005
+                    </td>
+                    <td>
+                       修改权利项为 作曲者 姓名示例
+                    </td>
+                    <td>
+                        2017-10-24 04:47:58
+                    </td>
+                    <td>
+                       曲库管理员A
+                    </td>
+                </tr>                                 
+            </tbody>
+        </table>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity -->
+    <script src="js/demo/peity-demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+
+
+             $('.demo1').click(function () {
+                swal({
+                    title: "您确定要将该内容下架吗？",
+                    text: "下架后 平台 版本 用户将不能访问本资源，请确定后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "下架！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal({
+                          title: "请输入下架理由",
+                          text: "请输入有关描述信息",
+                          type: "input",
+                          showCancelButton: true,
+                          closeOnConfirm: false,
+                          confirmButtonColor: "#DD6B55",
+                          confirmButtonText: "确认！",
+                          cancelButtonText: "取消",
+                          inputPlaceholder: "请输入有关描述信息"
+                        },
+                        function(inputValue){
+                          if (inputValue === false) return false;
+
+                          if (inputValue === "") {
+                            swal.showInputError("必须输入有关描述信息");
+                            return false
+                          }
+
+                          swal("操作成功！", "我们将在10分钟内下架并清理缓存，成功后会有邮件通知", "success");
+                        });
+
+                    } else {
+                        swal("已取消操作", "您取消了下载操作！", "error");
+                    }
+                });
+            });
+        });
+    </script>
+
+    
+    
+
+</body>
+
+</html>

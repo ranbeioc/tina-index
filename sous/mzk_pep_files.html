@@ -1,0 +1,401 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 歌手资源管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>歌手资源列表</h5>
+                        <div class="ibox-tools">
+                            
+                            <div style="float: right;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     版本 V1.0 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">统一版</a>
+                                    </li>
+                                    <li><a href="#">V1.0</a>
+                                    </li>
+                                    <li><a href="#">V2.0</a>
+                                    </li>
+                                    <li><a href="#">V3.0</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="float: right; margin-right: 10px;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     移动端 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">移动端</a>
+                                    </li>
+                                    <li><a href="#">电视端</a>
+                                    </li>
+                                    <li><a href="#">KTV</a>
+                                    </li>
+                                    <li><a href="#">智能硬件</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <span class="small pull-right">最后更新：<i class="fa fa-clock-o"></i> 2017-05-06 15:29:39 <button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-refresh"></i> 刷新</button></span>
+                        <h2>歌手名称示例 - 媒体资源管理</h2>
+                        <p>
+                            通过实时同步联通媒体资源数据库
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-2 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                    <option value="0">全部版块</option>
+                                    <option value="1">听</option>
+                                    <option value="2">看</option>
+                                    <option value="3">唱</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-5 m-b-xs">
+                                <div data-toggle="buttons" class="btn-group">
+                                    <label class="btn btn-sm btn-white active">
+                                        <input type="radio" id="option1" name="options">全部栏目</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option1" name="options">歌手</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option2" name="options">歌曲</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option3" name="options">推荐</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option3" name="options">专题</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option3" name="options">排行</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="input-group">
+                                    <input type="text" placeholder="请输入歌曲标题关键词" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>资源编号</th>
+                                        <th>标题</th>
+                                        <th>歌手</th>
+                                        <th>访问量</th>
+                                        <th>入库日期</th>
+                                        <th>所属版块</th>
+                                        <th>所属CP</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">看</span>
+                                        </td>
+                                        <td>天籁传音数字技术有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">听</span>
+                                        </td>
+                                        <td>道然传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>资源内容标题名称示例</td>
+                                        <td>歌手名称示例</td>
+                                        <td>23556</td>
+                                        <td>2017-05-06 17:13:30</td>
+                                        <td>
+                                        <span class="label label-success">唱</span>
+                                        </td>
+                                        <td>路通音乐传媒有限公司</td>
+                                        <td><a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 查看 </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-white" disabled="disabled"><i class="fa fa-chevron-left"></i>
+                                </button>
+                                <button class="btn btn-white active">1</button>
+                                <button class="btn btn-white">2</button>
+                                <button class="btn btn-white">3</button>
+                                <button class="btn btn-white">4</button>
+                                <label class="btn btn-white" disabled="disabled">...</label>
+                                <button class="btn btn-white">145</button>
+                                <button class="btn btn-white">146</button>
+                                <button class="btn btn-white">147</button>
+                                <button class="btn btn-white">148</button>
+                                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity -->
+    <script src="js/demo/peity-demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+    
+    
+
+</body>
+
+</html>

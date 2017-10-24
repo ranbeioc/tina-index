@@ -4884,10 +4884,13 @@ body.modal-open {
 
 .logo-name {
     color: #e6e6e6;
-    font-size: 180px;
-    font-weight: 800;
+    font-size: 100px;
+    font-weight: 300;
     letter-spacing: -10px;
     margin-bottom: 0px;
+}
+.logo-name2 {
+    font-weight: 500;
 }
 
 .middle-box h1 {
@@ -5631,7 +5634,6 @@ dd.project-people {
 
 .clients-list .tab-pane {
     position: relative;
-    height: 600px;
 }
 
 .client-detail {

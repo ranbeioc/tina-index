@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 用户资料</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>基本资料</h5>
+                        <div class="ibox-tools">
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="signupForm">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">用户头像：</label>
+                                <div class="col-sm-8">
+                                    <div class="text-center">
+                                        <div class="m-b-sm">
+                                            <img alt="image" class="img-circle" src="img/bg.png">
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="form_avatar.html" class="J_menuItem btn btn-xs btn-primary"><i class="fa fa-edit"></i> 编辑头像</a>
+                                        </div>
+                                    </div>
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 头像支持 PNG, JPG 格式方形图片（400*400），大小在 2M 以内</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">注册邮箱：</label>
+                                <div class="col-sm-8">
+                                    <input id="email" name="email" class="form-control" type="email" value="">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 登录邮箱是唯一标识，不可重复</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">名称：</label>
+                                <div class="col-sm-8">
+                                    <input id="firstname" name="firstname" class="form-control" type="text" value="">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入您的用户昵称，可重复</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">机构名称：</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control m-b" id="username" name="username" type="text" aria-required="true" aria-invalid="true" class="error">
+                                        <option>请选择所属机构</option>
+                                        <option value="1">天籁传音数字技术有限公司</option>
+                                        <option value="2">示例机构名称样例1</option>
+                                        <option value="3">示例机构名称样例2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">联系电话：</label>
+                                <div class="col-sm-8">
+                                    <input id="prohone" name="prohone" class="form-control" type="text" value="">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入您的座机或手机电话号码</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">联系地址：</label>
+                                <div class="col-sm-8">
+                                    <input id="prodas" name="prodas" class="form-control" type="text" value="">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入您的通讯联系地址</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">密码：</label>
+                                <div class="col-sm-8">
+                                    <input id="password" name="password" class="form-control" type="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">确认密码：</label>
+                                <div class="col-sm-8">
+                                    <input id="confirm_password" name="confirm_password" class="form-control" type="password" value="">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 请再次输入您的密码</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">说明：</label>
+                                <div class="col-sm-8">
+                                    <textarea id="ccomment" name="comment" class="form-control" required="" aria-required="true" rows="10"></textarea>
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入字符在300个以内</span>
+                                </div>
+                            </div>
+                            <!--div class="form-group">
+                                <div class="col-sm-8 col-sm-offset-3">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="checkbox" id="agree" name="agree"> 我已经认真阅读并同意《H+使用协议》
+                                        </label>
+                                    </div>
+                                </div>
+                            </div-->
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit">保存更改</button>
+                                    <button class="btn btn-white" type="submit">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>权限设置</h5>
+                            <div class="ibox-tools">
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <form class="form-horizontal m-t" id="signupForm">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">用户角色</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control m-b" id="username" name="username" type="text" aria-required="true" aria-invalid="true" class="error">
+                                            <option>请选择角色类型</option>
+                                            <option value="0">超级管理员</option>
+                                            <option value="1">综合管理员</option>
+                                            <option value="2">分部管理员</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">运营版块
+                                        <br/><small class="text-navy">根据角色自动勾选</small>
+                                    </label>
+
+                                    <div class="col-sm-10">
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 板块名称1 </label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 板块名称2</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 板块名称3</label>
+                                        </div>
+                                        <!--div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value=""> <i></i> 听（选中）</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" disabled=""> <i></i> 听（禁用）</label>
+                                        </div>
+                                        <div class="radio i-checks">
+                                            <label>
+                                                <input type="radio" value="option1" name="a"> <i></i> 选项1</label>
+                                        </div>
+                                        <div class="radio i-checks">
+                                            <label>
+                                                <input type="radio" checked="" value="option2" name="a"> <i></i> 选项2（选中）</label>
+                                        </div>
+                                        <div class="radio i-checks">
+                                            <label>
+                                                <input type="radio" disabled="" checked="" value="option2"> <i></i> 选项3（选中并禁用）</label>
+                                        </div>
+                                        <div class="radio i-checks">
+                                            <label>
+                                                <input type="radio" disabled="" name="a"> <i></i> 选项4（禁用）</label>
+                                        </div-->
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">管理面板
+                                        <br/><small class="text-navy">根据角色自动勾选</small>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单1</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" > <i></i> 功能菜单2</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单3</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单4</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单5</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单6</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单7</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单8</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单9</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 功能菜单10</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <button class="btn btn-primary" type="submit">保存更改</button>
+                                        <button class="btn btn-white" type="submit">取消</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+
+    <script src="js/demo/form-validate-demo.js"></script>
+    
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+</body>
+
+</html>

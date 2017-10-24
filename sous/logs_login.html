@@ -1,0 +1,482 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>日志查询 - 登录</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <span class="small pull-right">最后更新：<i class="fa fa-clock-o"></i> 2017-05-06 15:29:39 <button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-refresh"></i> 刷新</button></span>
+                        <h2>日志查询 - 登录记录</h2>
+                        <p>
+                            记录所有被管理用户的登录登出行为数据
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-2 m-b-xs">
+                                <select class="input-xs form-control input-s-xs inline">
+                                        <option>请选择机构</option>
+                                        <option value="0">天籁传音数字技术有限公司</option>
+                                        <option value="1">其他机构示例1</option>
+                                        <option value="2">其他机构示例2</option>
+                                        <option value="3">其他机构示例3</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-5 m-b-xs">
+                                <div data-toggle="buttons" class="btn-group">
+                                    <label class="btn btn-sm btn-white active">
+                                        <input type="radio" id="option1" name="options">全部管理员</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option1" name="options">超级管理员</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option2" name="options">综合管理员</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option3" name="options">分部管理员</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="input-group">
+                                    <input type="text" placeholder="请输入用户/公司名称或邮箱关键词" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>用户名称</th>
+                                        <th>IP地址</th>
+                                        <th>邮件地址</th>
+                                        <th>用户角色</th>
+                                        <th>运营版块</th>
+                                        <th>行为&时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            000001
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile.html"><img alt="image" title="联通音乐管理员1" class="img-circle" src="img/a3.jpg"><strong> 曲库管理员1</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@cucc.com</td>
+                                        <td><span class="label label-danger">综合管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">全平台</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000004
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile1.html"><img alt="image" title="管理员-移动端" class="img-circle" src="img/a7.jpg"><strong> 管理员-移动端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@lutong.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">移动端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-danger">退出</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000005
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile2.html"><img alt="image" title="管理员-电视端" class="img-circle" src="img/a4.jpg"><strong> 管理员-电视端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@daoran.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">电视端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000002
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile3.html"><img alt="image" title="管理员-天籁" class="img-circle" src="img/a5.jpg"><strong> 技术运维部</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                        <td><span class="label label-danger">超级管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">全平台</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000003
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile3.html"><img alt="image" title="管理员-天籁" class="img-circle" src="img/a5.jpg"><strong> 管理员-天籁</strong></a>
+                                                    
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-success">KTV</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000004
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile1.html"><img alt="image" title="管理员-移动端" class="img-circle" src="img/a7.jpg"><strong> 管理员-移动端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@lutong.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">移动端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-danger">退出</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000005
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile2.html"><img alt="image" title="管理员-电视端" class="img-circle" src="img/a4.jpg"><strong> 管理员-电视端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@daoran.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">电视端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000004
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile1.html"><img alt="image" title="管理员-移动端" class="img-circle" src="img/a7.jpg"><strong> 管理员-移动端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@lutong.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">移动端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000005
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile2.html"><img alt="image" title="管理员-电视端" class="img-circle" src="img/a4.jpg"><strong> 管理员-电视端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@daoran.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">电视端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000002
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile3.html"><img alt="image" title="管理员-天籁" class="img-circle" src="img/a5.jpg"><strong> 技术运维部</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                        <td><span class="label label-danger">超级管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">全平台</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000005
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile2.html"><img alt="image" title="管理员-电视端" class="img-circle" src="img/a4.jpg"><strong> 管理员-电视端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@daoran.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">电视端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000004
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile1.html"><img alt="image" title="管理员-移动端" class="img-circle" src="img/a7.jpg"><strong> 管理员-移动端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@lutong.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">移动端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-danger">退出</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000005
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile2.html"><img alt="image" title="管理员-电视端" class="img-circle" src="img/a4.jpg"><strong> 管理员-电视端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@daoran.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">电视端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000002
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile3.html"><img alt="image" title="管理员-天籁" class="img-circle" src="img/a5.jpg"><strong> 技术运维部</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                        <td><span class="label label-danger">超级管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">全平台</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000003
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile3.html"><img alt="image" title="管理员-天籁" class="img-circle" src="img/a5.jpg"><strong> 管理员-天籁</strong></a>
+                                                    
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-success">KTV</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-danger">退出</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000004
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile1.html"><img alt="image" title="管理员-移动端" class="img-circle" src="img/a7.jpg"><strong> 管理员-移动端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@lutong.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">移动端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-danger">退出</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000005
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile2.html"><img alt="image" title="管理员-电视端" class="img-circle" src="img/a4.jpg"><strong> 管理员-电视端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@daoran.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">电视端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000002
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile3.html"><img alt="image" title="管理员-天籁" class="img-circle" src="img/a5.jpg"><strong> 技术运维部</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                        <td><span class="label label-danger">超级管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">全平台</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-info">登录</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            000005
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="profile2.html"><img alt="image" title="管理员-电视端" class="img-circle" src="img/a4.jpg"><strong> 管理员-电视端</strong></a>
+                                        </td>
+                                        <td>123.56.89.145</td>
+                                        <td><i class="fa fa-envelope"></i> admin@daoran.com</td>
+                                        <td><span class="label label-danger">分部管理员</span>
+                                        </td>
+                                        <td><span class="label label-success">电视端</span>
+                                        </td>
+                                        <td>
+                                        <span class="label label-danger">退出</span>
+                                        2017-05-10 00:05:15
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-white" disabled="disabled"><i class="fa fa-chevron-left"></i>
+                                </button>
+                                <button class="btn btn-white active">1</button>
+                                <button class="btn btn-white">2</button>
+                                <button class="btn btn-white">3</button>
+                                <button class="btn btn-white">4</button>
+                                <label class="btn btn-white" disabled="disabled">...</label>
+                                <button class="btn btn-white">5266</button>
+                                <button class="btn btn-white">5267</button>
+                                <button class="btn btn-white">5268</button>
+                                <button class="btn btn-white">5269</button>
+                                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity -->
+    <script src="js/demo/peity-demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+    
+    
+
+</body>
+
+</html>
