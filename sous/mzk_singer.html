@@ -14,10 +14,13 @@
     <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
         <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css?v=4.1.0" rel="stylesheet">
-
+    <style type="text/css">
+        .tagslayer li{ margin:5px 5px 5px 5px; }
+    </style>
 </head>
 
 <body class="gray-bg">
@@ -47,6 +50,7 @@
 
                                             <div class="m-b-sm">
                                                 <img alt="image" src="img/a8.jpg" style="width: 100%">
+                                                <div class="text-center" style="position: absolute; right: 15px;top:0;"><a href="form_avatar.html" class="J_menuItem btn btn-xs btn-primary"><i class="fa fa-edit"></i> 编辑头像</a></div>
                                             </div>
                                             <h4>歌手名称示例</h4>
 
@@ -69,7 +73,7 @@
                                             代表作品：暗战、无间道、天若有情、阿虎、来生缘、忘情水、谢谢你的爱、冰雨
                                         </p>
                                         <br>
-                                        <button type="button" class="btn btn-danger btn-sm btn-block"><i class="fa fa-pencil"></i> 编辑信息
+                                        <button type="button" class="btn btn-danger btn-sm btn-block" data-toggle="modal" data-target="#exampleModal1"><i class="fa fa-pencil"></i> 编辑信息
                                         </button>
                                     </div>
                                 </div>
@@ -95,8 +99,10 @@
 
                                         <h3>标签</h3>
                                         <p>
-                                            <span class="label label-info">标签1</span> <span class="label label-info">标签2</span> <span class="label label-info">标签3</span> <span class="label label-info">标签4</span>
+                                            <span class="label label-info">标签1</span> <span class="label label-info">标签2</span> <span class="label label-info">标签3</span> <span class="label label-info">标签4</span> <span class="label label-info">标签5</span> <span class="label label-info">标签6</span>
                                         </p>
+                                        <button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#exampleModal0"><i class="fa fa-pencil"></i> 编辑标签
+                                        </button>
 
                                         <h3>个人简介</h3>
                                         <p>
@@ -159,19 +165,37 @@
                     <div class="ibox-content">
                         <span class="text-muted small pull-right">最后更新：<i class="fa fa-clock-o"></i> 2015-09-01 12:00</span>
                         <h2>歌曲资源管理</h2>
+
+                        <div class="input-group" style="width:100%; margin-bottom: 10px;">
+                            <select multiple data-placeholder="" class="chosen-select" style="width:100%;">
+                                <option value="0">分类</option>
+                                <option value="1" selected>分类名称1</option>
+                                <option value="2" selected>分类名称2</option>
+                                <option value="3">分类名称3</option>
+                                <option value="4">分类名称4</option>
+                                <option value="5">分类名称5</option>
+                                <option value="6">分类名称6</option>
+                                <option value="7">分类名称7</option>
+                                <option value="8">分类名称8</option>
+                            </select>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn btn-success">保存</button>
+                            </span>
+                        </div>
         
                         <div class="input-group">
-                            <input type="text" placeholder="查找资源或用户" class="input form-control">
+                            <input type="text" placeholder="查找资源，专辑，歌单或用户" class="input form-control">
                             <span class="input-group-btn">
-                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> 搜索</button>
-                                </span>
+                                <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> 搜索</button>
+                            </span>
                         </div>
+                        
                         <div class="clients-list">
                             <ul class="nav nav-tabs">
 
                                 <li class="active"><a data-toggle="tab" href="#tab-0">歌曲资源</a></li>
                                 <li ><a data-toggle="tab" href="#tab-00">专辑资源</a></li>
-                                <li ><a data-toggle="tab" href="#tab-000">歌单资源</a></li>
+                                <li ><a data-toggle="tab" href="#tab-000">相关歌单</a></li>
 
                                 <li><a data-toggle="tab" href="#tab-1">翻唱用户</a>
                                 </li>
@@ -187,7 +211,7 @@
                             <div class="tab-content">
                                 <div id="tab-0" class="tab-pane active">
                                     <div class="table-responsive">
-                                                   <table class="table table-striped">
+                                        <table class="table table-striped">
                                             <thead>
                                                 <tr>
                                                     <th>编号</th>
@@ -3064,7 +3088,70 @@
         </div>
     </div>
 
+<div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑标签信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+                  <label>
+                    请选择添加标签
+                  </label>
+                <div class="input-group" >
+                    <select data-placeholder="" class="chosen-select" style="width:100%;">
+                        <option value="0">选择标签分类</option>
+                        <option value="1">标签分类1</option>
+                        <option value="2" selected>标签分类2</option>
+                        <option value="3">标签分类3</option>
+                        <option value="4">标签分类4</option>
+                        <option value="5">标签分类5</option>
+                        <option value="6">标签分类6</option>
+                        <option value="7">标签分类7</option>
+                        <option value="8">标签分类8</option>
+                    </select>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn btn-success">添加</button>
+                    </span>
+                </div>
+            </div>
+     
+          </div>
 
+        <div class="row">
+            <div class="col-xs-12">
+                  <label>
+                    已添加标签
+                  </label>
+                  <ul class="list-inline tagslayer">
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                  </ul>
+            </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 
@@ -3222,7 +3309,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">编辑版权信息</h4>
+        <h4 class="modal-title">编辑版权人信息</h4>
       </div>
       <div class="modal-body">
           <div class="row">
@@ -3253,7 +3340,16 @@
               </form>
             </div>
             <div class="col-xs-6">
-              
+                            <form class="form">
+              <div class="">
+                <label>
+                  期限
+                </label>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+              </div>
+            </form>
             </div>
           </div>
         <div class="row">
@@ -3413,10 +3509,147 @@
 </div><!-- /.modal -->
 
 
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑元数据信息</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+             
+              <label>歌曲中文名</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="李香兰" value="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+    
+                <label>歌曲别名</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="秋意浓">
+                </div>
+              </form>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+             
+              <label>中文名</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="字段示例" value="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+    
+                <label>外文名</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Andy Lau，Lau Tak Wah">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+         
+              <label>别名</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="华仔，华Dee">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <label>国籍</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="中国" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <label>民族</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="汉族">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <label>星座</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="天秤座" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <label>出生日期</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="1961年9月27日">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+            <form class="form">
+              <label>出生地</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="香港新界大埔镇泰亨村">
+              </div>
+            </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+            <form class="form">
+              <label>个人简介</label>
+              <div class="form-group">
+                <textarea rows="8" style="width: 100%">
+                    刘德华，BBS，MH，JP（英语：Andy Lau Tak-wah，1961年9月27日－），香港著名演员兼歌手，1990年代获封香港乐坛“四大天王”之一，也是吉尼斯世界纪录大全中获奖最多的香港歌手；电影方面他获得三次香港电影金像奖最佳男主角和两次金马奖最佳男主角，至今参演超过140部电影。刘德华是天幕公司和映艺集团的创建者，作为投资人已参与制作了20多部华语电影。
+                </textarea>
+              </div>
+            </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+            <form class="form">
+              <label>获得奖项</label>
+              <div class="form-group">
+                <textarea rows="8" style="width: 100%">
+                    获得了台湾、中国大陆、新加坡和马来西亚、日本与韩国，以及北美一些机构授予的许多流行歌手荣誉。在Channel V主办的全球华语音乐榜中榜上，从1994年至2002年刘德华共有10首歌曲入选榜中榜年度20大金曲，96至98年连续三届获得传媒推荐奖，1999年与2000年分别荣获跨世纪男歌手和最受欢迎歌手大奖。在亚洲七家华语电台共同举办的全球华语歌曲排行榜上，从2001年到2006年他共有6首歌曲入选排行榜20大金曲，并在2002年的第二届、2003年的第三届和2006年的第六届先后三次获得最受欢迎男歌手奖，至今为获该荣誉最多的男歌手。其他地区奖项还有：1990年代台湾民生报金曲龙虎榜多届最受欢迎歌手，1992年北京电视台的最受欢迎歌星奖，1993年上海电视台的最受欢迎天王和四川国际电视节最受欢迎歌星奖，1993年至1998年连续获日本杂志《Club香港仔》评选的全日本明星人气奖及最受欢迎外国歌手第一名，1993年韩国电视台评选的全亚洲最受欢迎男歌手，1994年加拿大多伦多美加华语电台至爱男歌手，94年、95年、98年、99年和2001年新加坡金曲奖最受欢迎男歌手，1995年泰国最受欢迎男歌手，1995年与1996年连续获得Channel V与美国Billboard杂志联合颁发的亚洲最受欢迎歌手奖，以及1997年澳洲中文广播电台评选的97年度南半球最受欢迎男歌手等等。
+                </textarea>
+              </div>
+            </form>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
     <!-- 全局js -->
     <script src="js/jquery.min.js?v=2.1.4"></script>
     <script src="js/bootstrap.min.js?v=3.3.6"></script>
     <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
 
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
@@ -3471,6 +3704,32 @@
                     }
                 });
             });
+
+
+
+            var config = {
+                '.chosen-select': {
+                    width: "99%"
+                },
+                '.chosen-select-deselect': {
+                    allow_single_deselect: true
+                },
+                '.chosen-select-no-single': {
+                    disable_search_threshold: 10
+                },
+                '.chosen-select-no-results': {
+                    no_results_text: 'Oops, nothing found!'
+                },
+                '.chosen-select-width': {
+                    width: "95%"
+                }
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+            }
+
+
+
         });
     </script>
 

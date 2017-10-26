@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title> - 主页示例</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row row-sm text-center">
+                           <div class="col-sm-4">
+                                <div class="widget style1 blue-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-th-list fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 权利项总数 </span>
+                                            <h2 class="font-bold">12</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget style1 navy-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-pie-chart fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 标记比率 </span>
+                                            <h2 class="font-bold">43%</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="widget style1 lazur-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-copyright fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 标记曲目总数 </span>
+                                            <h2 class="font-bold">35645</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+           
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>结算申请单审批 <small><button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-plus"></i> 添加新项</button></small></h5>
+                                <div class="ibox-tools">
+                                    <div class="ibox-tools">
+                            <div style="float: right;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     统一版 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">统一版</a>
+                                    </li>
+                                    <li><a href="#">V1.0</a>
+                                    </li>
+                                    <li><a href="#">V2.0</a>
+                                    </li>
+                                    <li><a href="#">V3.0</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="float: right; margin-right: 10px;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     全部平台 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">全部平台</a>
+                                    </li>
+                                    <li><a href="#">移动端</a>
+                                    </li>
+                                    <li><a href="#">电视端</a>
+                                    </li>
+                                    <li><a href="#">KTV</a>
+                                    </li>
+                                    <li><a href="#">智能硬件</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                            <div class="ibox-content" style="border-top:none;">
+                                <table class="table table-striped projects">
+                      <thead>
+                        <tr>
+                          <th>权利编号</th>
+                          <th>权利项名称</th>
+                          <th>加入时间</th>
+                          <th>添加人</th>
+                          <th>状态</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                       <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-success">已启用</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                              <a href="#" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo2"><i class="fa fa-close"></i> 停用 </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>000001</td>
+                          <td>权利项示例</td>
+                          <td>2017-10-27 01:51:01</td>
+                          <td>管理员</td>
+                          <td>
+                            <span class="label label-default">已停用</span>
+                          </td>
+                         <td class="vertical-align-mid">
+                              <a href="invoice.html" class="btn btn-sm btn-white J_menuItem"><i class="fa fa-eye"></i> 查看标记资源</a>
+                              <a href="#" class="btn btn-sm btn-white demo1"><i class="fa fa-check"></i> 启用 </a>
+
+                          </td>
+                        </tr>
+
+
+
+
+
+                      </tbody>
+                    </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+              
+            </div>
+        
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+        <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+         
+
+           $('.demo1').click(function () {
+                swal({
+                    title: "您确定要启用该项目吗？",
+                    text: "启用后将可被标记使用，请查看详细资料后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "启用！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("启用成功！", "您已经通过了该结算申请。", "success");
+                    } else {
+                        swal("已撤销操作", "您取消了该操作！", "error");
+                    }
+                });
+            });
+
+             $('.demo2').click(function () {
+                swal({
+                    title: "您确定要停用该项目吗？",
+                    text: "停用后将无法标记本栏目，请确定后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "停用",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal({
+                          title: "请输入停用理由",
+                          text: "请输入有关描述信息",
+                          type: "input",
+                          showCancelButton: true,
+                          closeOnConfirm: false,
+                          confirmButtonColor: "#DD6B55",
+                          confirmButtonText: "停用！",
+                          cancelButtonText: "取消",
+                          inputPlaceholder: "请输入有关描述信息"
+                        },
+                        function(inputValue){
+                          if (inputValue === false) return false;
+
+                          if (inputValue === "") {
+                            swal.showInputError("必须输入有关描述信息");
+                            return false
+                          }
+
+                          swal("停用成功！", "我们将在处理成功后会有邮件通知", "success");
+                        });
+
+                    } else {
+                        swal("已取消操作", "您取消了下载操作！", "error");
+                    }
+                });
+            });
+
+
+});
+    </script>
+</body>
+
+</html>

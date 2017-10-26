@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title> - 主页示例</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style type="text/css">
+      .clients-list {
+          margin-top: 0;
+      }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row row-sm text-center">
+                           <div class="col-sm-4">
+                                <div class="widget style1 blue-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-users fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 权利人总数 </span>
+                                            <h2 class="font-bold">10</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget style1 navy-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-pie-chart fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 标记比率 </span>
+                                            <h2 class="font-bold">34%</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="widget style1 lazur-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-copyright fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 标记曲目总数 </span>
+                                            <h2 class="font-bold">37545</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+           
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>结算申请单审批 <small><button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-plus"></i> 添加权利归属人</button></small></h5>
+                                <div class="ibox-tools">
+                                    <div class="ibox-tools">
+                            <div style="float: right;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     统一版 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">统一版</a>
+                                    </li>
+                                    <li><a href="#">V1.0</a>
+                                    </li>
+                                    <li><a href="#">V2.0</a>
+                                    </li>
+                                    <li><a href="#">V3.0</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="float: right; margin-right: 10px;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     全部平台 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">全部平台</a>
+                                    </li>
+                                    <li><a href="#">移动端</a>
+                                    </li>
+                                    <li><a href="#">电视端</a>
+                                    </li>
+                                    <li><a href="#">KTV</a>
+                                    </li>
+                                    <li><a href="#">智能硬件</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                            <div class="ibox-content" style="border-top:none;">
+                               <div class="clients-list">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> 权利人</a>
+                                </li>
+                                <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> 权利组织机构</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>用户</th>
+                                                        <th>所属公司</th>
+                                                        <th>联系电话</th>
+                                                        <th>邮件地址</th>
+                                                        <th>投放平台</th>
+                                                        <th>授权数量</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>001</td>
+                                                        <td>权利人名称</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        </td>
+                                                        <td><span class="label label-success">全平台</span>
+                                                        </td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>002</td>
+                                                        <td>权利人名称</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654321</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        </td>
+                                                        <td><span class="label label-success">全平台</span>
+                                                        </td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>003</td>
+                                                        <td>权利人名称</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        </td>
+                                                        <td><span class="label label-success">移动端</span>
+                                                        </td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>004</td>
+                                                        <td>权利人名称</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><i class="fa fa-phone"> </i>  010-89076543</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        </td>
+                                                        <td><span class="label label-success">电视端</span>
+                                                        </td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>005</td>
+                                                        <td>权利人名称</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        </td>
+                                                        <td><span class="label label-success">KTV</span>
+                                                        </td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>组织名称</th>
+                                                        <th>组织类型</th>
+                                                        <th>联系电话</th>
+                                                        <th>邮件地址</th>
+                                                        <th>授权数量</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>0001</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">版权方</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654321</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0002</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">供应商</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  010-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0003</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">代理</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0004</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">代理</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0005</td>
+                                                        <td>版权组织机构名称示例</td>
+                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">代理</a>
+                                                        </td>
+                                                        <td><i class="fa fa-phone"> </i>  023-87654123</td>
+                                                        <td><i class="fa fa-envelope"></i> admin@tlkg.com</td>
+                                                        <td>435 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已激活</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 详情 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 停用 </a>
+                                                        </td>
+                                                    </tr>
+                                                
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+              
+            </div>
+        
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+        <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+         
+
+           $('.demo1').click(function () {
+                swal({
+                    title: "您确定要启用该项目吗？",
+                    text: "启用后将可被标记使用，请查看详细资料后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "启用！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("启用成功！", "您已经通过了该结算申请。", "success");
+                    } else {
+                        swal("已撤销操作", "您取消了该操作！", "error");
+                    }
+                });
+            });
+
+             $('.demo2').click(function () {
+                swal({
+                    title: "您确定要停用该项目吗？",
+                    text: "停用后将无法标记本栏目，请确定后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "停用",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal({
+                          title: "请输入停用理由",
+                          text: "请输入有关描述信息",
+                          type: "input",
+                          showCancelButton: true,
+                          closeOnConfirm: false,
+                          confirmButtonColor: "#DD6B55",
+                          confirmButtonText: "停用！",
+                          cancelButtonText: "取消",
+                          inputPlaceholder: "请输入有关描述信息"
+                        },
+                        function(inputValue){
+                          if (inputValue === false) return false;
+
+                          if (inputValue === "") {
+                            swal.showInputError("必须输入有关描述信息");
+                            return false
+                          }
+
+                          swal("停用成功！", "我们将在处理成功后会有邮件通知", "success");
+                        });
+
+                    } else {
+                        swal("已取消操作", "您取消了下载操作！", "error");
+                    }
+                });
+            });
+
+
+});
+    </script>
+</body>
+
+</html>

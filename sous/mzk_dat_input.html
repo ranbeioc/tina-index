@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> - 视频播放</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+     <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+      <link href="css/plugins/codemirror/codemirror.css" rel="stylesheet">
+    <link href="css/plugins/codemirror/ambiance.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins/plyr/plyr.css">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>文件列表</h5>
+                        <div class="ibox-tools">
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>类型</th>
+                                        <th>文件地址</th>
+                                        <th>日期</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>MV-原</td>
+                                        <td>文件名称示例<br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal1"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.mp4 </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>MV-4K</td>
+                                        <td>文件名称示例 <span class="label label-danger">缺失</span> <br>
+                                            </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem disabled"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem disabled"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>MV-FD</td>
+                                        <td>文件名称示例 <span class="label label-warning">异常</span> <br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal1"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.mp4 </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>MV-HD</td>
+                                        <td>文件名称示例<br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal1"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.mp4 </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>MV-SD</td>
+                                        <td>文件名称示例<br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal1"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.mp4 </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>音频伴奏</td>
+                                        <td>文件名称示例 <span class="label label-danger">缺失</span> <br>
+                                           </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem disabled"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem disabled"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>MV伴奏</td>
+                                        <td>文件名称示例<br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal1"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.mp4 </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>音频原唱</td>
+                                        <td>文件名称示例<br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal2"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.mp3 </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>歌词1</td>
+                                        <td>文件名称示例 <span class="label label-warning">异常</span> <br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal3"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.ass </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>歌词2</td>
+                                        <td>文件名称示例<br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal3"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.ass </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>
+                                            12345678
+                                        </td>
+                                        <td>评分</td>
+                                        <td>文件名称示例  <span class="label label-warning">异常</span> <br>
+                                            <a href="#" class="btn btn-white btn-xs" data-toggle="modal" data-target=".modal2"> 预览 </a>
+                                        文件地址：/asdf/asdasd/asdasd/asdasdasdas.txt </td>
+                                        <td>入库日期: <待入库><br>
+                                        更新日期: <待入库><br>
+                                        缓存时间: <待入库></td>
+                                        <td>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 编码 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 版权 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 修改 </a>
+                                            <a href="#" class="btn btn-white btn-sm J_menuItem"> 删除 </a>
+                                        </td>
+                                    </tr>
+                                   
+                                    
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-white" disabled="disabled"><i class="fa fa-chevron-left"></i>
+                                </button>
+                                <button class="btn btn-white active">1</button>
+                                <button class="btn btn-white">2</button>
+                                <button class="btn btn-white">3</button>
+                                <button class="btn btn-white">4</button>
+                                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+<div class="modal fade modal1" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">视频预览</h4>
+      </div>
+      <div class="modal-body">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        参数1
+                    </td>
+                    <td>
+                       参数1
+                    </td>
+                    <td>
+                        参数1
+                    </td>
+                    <td>
+                       参数1
+                    </td>
+                    <td>
+                        参数1
+                    </td>
+                </tr>                                   
+            </tbody>
+        </table>
+        
+        <div class="player" style="background-color: #f1f1f1;">
+            <video poster="https://plyr.io/poster.jpg" controls crossorigin>
+                <!-- Video files -->
+                <source src="https://cdn.selz.com/plyr/1.0/movie.mp4" type="video/mp4">
+                <source src="https://cdn.selz.com/plyr/1.0/movie.webm" type="video/webm">
+
+                <!-- Text track file -->
+                <track kind="captions" label="English" srclang="en" src="https://cdn.selz.com/plyr/1.0/example_captions_en.vtt" default>
+
+                    <!-- Fallback for browsers that don't support the <video> element -->
+                    <a href="https://cdn.selz.com/plyr/1.0/movie.mp4">Download</a>
+            </video>
+        </div>
+
+      </div>
+      <!--div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div-->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade modal2" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">音频预览</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        参数1
+                    </td>
+                    <td>
+                       参数1
+                    </td>
+                    <td>
+                        参数1
+                    </td>
+                    <td>
+                       参数1
+                    </td>
+                    <td>
+                        参数1
+                    </td>
+                </tr>                                   
+            </tbody>
+        </table>
+        <div class="player" style="background-color: #f1f1f1;">
+            <audio controls>
+                <!-- Audio files -->
+                <source src="http://music.baidu.com/cms/app/muplayer/test_mp3/1.mp3" type="audio/mp3">
+
+                <!-- Fallback for browsers that don't support the <audio> element -->
+                您的浏览器不支持在线播放，请<a href="http://music.baidu.com/cms/app/muplayer/test_mp3/1.mp3">下载</a>
+            </audio>
+        </div>
+
+      </div>
+      <!--div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div-->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade modal3" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">歌词预览</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                    <th>参数字段</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        参数1
+                    </td>
+                    <td>
+                       参数1
+                    </td>
+                    <td>
+                        参数1
+                    </td>
+                    <td>
+                       参数1
+                    </td>
+                    <td>
+                        参数1
+                    </td>
+                </tr>                                   
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-md-12"  style="min-height: 400px;">
+                <h4>歌词编辑</h4>
+                <textarea id="code2" style="min-height: 400px; width: 100%;">
+[00:00.42]周杰伦 - 稻香
+[00:02.42]
+[00:03.42]词/曲:周杰伦
+[00:15.00]对这个世界如果你有太多的抱怨
+[00:18.77]跌倒了 就不敢继续往前走
+[00:21.48]为什麼 人要这麼的脆弱 堕落
+[00:26.03]请你打开电视看看 多少人
+[00:28.57]为生命在努力勇敢的走下去
+[00:31.55]我们是不是该知足
+[00:33.50]珍惜一切 就算没有拥有
+[00:37.47]
+[00:38.27]还记得你说家是唯一的城堡
+[00:42.17]随著稻香河流继续奔跑
+[00:45.12]微微笑 小时候的梦我知道
+[00:49.91]不要哭让萤火虫带著你逃跑
+[00:53.80]乡间的歌谣永远的依靠
+[00:56.48]童年的纸飞机 现在终於飞回我手里
+[01:01.28]
+[01:01.88]所谓的那快乐 赤脚在田里追蜻蜓追到累了
+[01:06.34]偷摘水果被蜜蜂给叮到怕了
+[01:09.37]谁在偷笑呢
+[01:10.87]我靠著稻草人吹著风唱著歌睡著了
+[01:14.47]哦 哦 午后吉它在虫鸣中更清脆
+[01:17.43]哦 哦 阳光洒在路上就不怕心碎
+[01:20.25]珍惜一切 就算没有拥有
+[01:24.67]
+[01:25.37]还记得你说家是唯一的城堡
+[01:28.97]随著稻香河流继续奔跑
+[01:31.89]微微笑 小时候的梦我知道
+[01:37.08]不要哭让萤火虫带著你逃跑
+[01:40.95]乡间的歌谣永远的依靠
+[01:43.76]回家吧 回到最初的美好
+[01:48.49]
+[01:48.89]不要这麼容易就想放弃 就像我说的
+[01:52.56]追不到的梦想 换个梦不就得了
+[01:55.50]为自己的人生鲜艳上色
+[01:58.03]先把爱涂上喜欢的颜色
+[02:00.46]
+[02:00.66]笑一个吧 功成名就不是目的
+[02:03.62]让自己快乐快乐这才叫做意义
+[02:06.25]童年的纸飞机 现在终於飞回我手里
+[02:11.65]
+[02:12.15]所谓的那快乐 赤脚在田里追蜻蜓追到累了
+[02:16.59]偷摘水果被蜜蜂给叮到怕了
+[02:19.35]谁在偷笑呢
+[02:21.22]我靠著稻草人吹著风唱著歌睡著了
+[02:24.65]哦 哦 午后吉它在虫鸣中更清脆
+[02:27.53]哦 哦 阳光洒在路上就不怕心碎
+[02:30.41]珍惜一切 就算没有拥有
+[02:35.02]
+[02:35.52]还记得你说家是唯一的城堡
+[02:39.26]随著稻香河流继续奔跑
+[02:42.21]微微笑 小时候的梦我知道
+[02:47.20]不要哭让萤火虫带著你逃跑
+[02:50.92]乡间的歌谣永远的依靠
+[02:53.92]回家吧 回到最初的美好
+[02:58.64]
+[02:59.14]还记得你说家是唯一的城堡
+[03:02.66]随著稻香河流继续奔跑
+[03:05.58]微微笑 小时候的梦我知道
+[03:10.63]不要哭让萤火虫带著你逃跑
+[03:14.35]乡间的歌谣永远的依靠
+[03:17.25]回家吧 回到最初的美好
+[03:22.12]
+[03:22.42]还记得你说家是唯一的城堡
+[03:26.12]随著稻香河流继续奔跑
+[03:29.08]微微笑 小时候的梦我知道
+[03:34.00]不要哭让萤火虫带著你逃跑
+[03:37.80]乡间的歌谣永远的依靠
+[03:40.71]回家吧 回到最初的美好
+[03:45.43]
+[03:45.93]还记得你说家是唯一的城堡
+[03:49.69]随著稻香河流继续奔跑
+[03:52.39]微微笑 小时候的梦我知道
+[03:57.60]不要哭让萤火虫带著你逃跑
+[04:01.37]乡间的歌谣永远的依靠
+[04:04.29]回家吧 回到最初的美好
+</textarea>
+            </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+    <script>
+        (function (d, u) {
+            var a = new XMLHttpRequest(),
+                b = d.body;
+
+            // Check for CORS support
+            // If you're loading from same domain, you can remove the if statement
+            if ("withCredentials" in a) {
+                a.open("GET", u, true);
+                a.send();
+                a.onload = function () {
+                    var c = d.createElement("div");
+                    c.setAttribute("hidden", "");
+                    c.innerHTML = a.responseText;
+                    b.insertBefore(c, b.childNodes[0]);
+                }
+            }
+        })(document, "css/plugins/plyr/sprite.svg");
+    </script>
+
+    <!-- Plyr core script -->
+    <script src="js/plugins/plyr/plyr.js"></script>
+    <script>
+        plyr.setup();
+    </script>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!-- CodeMirror -->
+    <script src="js/plugins/codemirror/codemirror.js"></script>
+    <script src="js/plugins/codemirror/mode/javascript/javascript.js"></script>
+
+
+        <script>
+
+        $(document).ready(function () {
+            /*
+            var editor_two = CodeMirror.fromTextArea(document.getElementById("code2"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                styleActiveLine: true
+            });
+
+            $('.modal3').on('show.bs.modal', function (e) {
+              $('.CodeMirror').click();
+            })
+            */
+            
+   
+        });
+
+    </script>
+    
+</body>
+
+</html>

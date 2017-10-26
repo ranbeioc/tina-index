@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title> - </title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style type="text/css">
+        .tagslayer li{ margin:5px 5px 5px 5px; }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>上传入库清单 <small></small></h5>
+                        <div class="ibox-tools">
+                            <a href="#" id="loading-example-btn" class="btn btn-info btn-xs"><i class="fa fa-download"></i> 下载入库模板</a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="file-pretty">
+                            <div class="form-group">
+                                <label class="font-noraml">上传入库清单文件（XLS/X）</label>
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>入库资源列表</h5>
+                        <div class="ibox-tools">
+                            <div style="float: right;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     统一版 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">统一版</a>
+                                    </li>
+                                    <li><a href="#">V1.0</a>
+                                    </li>
+                                    <li><a href="#">V2.0</a>
+                                    </li>
+                                    <li><a href="#">V3.0</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="float: right; margin-right: 10px;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                     全部平台 <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">全部平台</a>
+                                    </li>
+                                    <li><a href="#">移动端</a>
+                                    </li>
+                                    <li><a href="#">电视端</a>
+                                    </li>
+                                    <li><a href="#">KTV</a>
+                                    </li>
+                                    <li><a href="#">智能硬件</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <span class="small pull-right"> <button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-upload"></i> 全部上传</button>  <button type="button" id="loading-example-btn" class="btn btn-default btn-xs"><i class="fa fa-times"></i> 取消</button></span>
+                        <h3>入库资源管理</h3>
+                        
+                        <div class="row">
+                            <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>编号</th>
+                                                    <th>标题</th>
+                                                    <th>歌手</th>
+                                                    <th>时长</th>
+                                                    <th>所属分类（可多选）</th>
+                                                    <th>权利人</th>
+                                                    <th>标签</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-success">已有</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-warning">新人</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="danger">
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td title="歌名和歌手名都重复时需要标记差异">资源标题示例<span class="label label-danger">双重</span></td>
+                                                    <td>歌手名称<span class="label label-success">已有</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-danger btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-success">已有</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-warning">新人</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-success">已有</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-warning">新人</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="danger">
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td title="歌名和歌手名都重复时需要标记差异">资源标题示例<span class="label label-danger">双重</span></td>
+                                                    <td>歌手名称<span class="label label-success">已有</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-danger btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-success">已有</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        12345678
+                                                    </td>
+                                                    <td>资源标题示例</td>
+                                                    <td>歌手名称<span class="label label-warning">新人</span></td>
+                                                    <td>03:30</td>
+                                                    <td>
+                                                    <select class="input-xs form-control input-s-xs inline">
+                                                        <option value="0">分类</option>
+                                                        <option value="1">分类名称1</option>
+                                                        <option value="2">分类名称2</option>
+                                                        <option value="3">分类名称3</option>
+                                                    </select>
+                                                    </td>
+                                                    <td>太合音乐</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal1"> 元数据 </a>
+                                                        <a href="mzk_dat_input.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
+                                                        <a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal3"> 版权 </a>
+                                                        <a href="#" class="btn btn-white btn-sm"> 删除 </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                            </table>
+                        </div>
+
+                        <div class="table-responsive">
+                            
+                            <div class="text-center">
+                                <button type="button" class="btn btn-white" disabled="disabled"><i class="fa fa-chevron-left"></i>
+                                </button>
+                                <button class="btn btn-white active">1</button>
+                                <button class="btn btn-white">2</button>
+                                <button class="btn btn-white">3</button>
+                                <button class="btn btn-white">4</button>
+                                <label class="btn btn-white" disabled="disabled">...</label>
+                                <button class="btn btn-white">243</button>
+                                <button class="btn btn-white">244</button>
+                                <button class="btn btn-white">245</button>
+                                <button class="btn btn-white">246</button>
+                                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑标签信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+                  <label>
+                    请选择添加标签
+                  </label>
+                <div class="input-group" >
+                    <select data-placeholder="" class="chosen-select" style="width:100%;">
+                        <option value="0">选择标签分类</option>
+                        <option value="1">标签分类1</option>
+                        <option value="2" selected>标签分类2</option>
+                        <option value="3">标签分类3</option>
+                        <option value="4">标签分类4</option>
+                        <option value="5">标签分类5</option>
+                        <option value="6">标签分类6</option>
+                        <option value="7">标签分类7</option>
+                        <option value="8">标签分类8</option>
+                    </select>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn btn-success">添加</button>
+                    </span>
+                </div>
+            </div>
+     
+          </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                  <label>
+                    已添加标签
+                  </label>
+                  <ul class="list-inline tagslayer">
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                  </ul>
+            </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑元数据信息</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+             
+              <label>歌曲中文名</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="李香兰" value="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+    
+                <label>歌曲别名</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="秋意浓">
+                </div>
+              </form>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+             
+              <label>中文名</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="字段示例" value="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+    
+                <label>外文名</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Andy Lau，Lau Tak Wah">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+         
+              <label>别名</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="华仔，华Dee">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <label>国籍</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="中国" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <label>民族</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="汉族">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <label>星座</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="天秤座" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <label>出生日期</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="1961年9月27日">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+            <form class="form">
+              <label>出生地</label>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="香港新界大埔镇泰亨村">
+              </div>
+            </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+            <form class="form">
+              <label>个人简介</label>
+              <div class="form-group">
+                <textarea rows="8" style="width: 100%">
+                    刘德华，BBS，MH，JP（英语：Andy Lau Tak-wah，1961年9月27日－），香港著名演员兼歌手，1990年代获封香港乐坛“四大天王”之一，也是吉尼斯世界纪录大全中获奖最多的香港歌手；电影方面他获得三次香港电影金像奖最佳男主角和两次金马奖最佳男主角，至今参演超过140部电影。刘德华是天幕公司和映艺集团的创建者，作为投资人已参与制作了20多部华语电影。
+                </textarea>
+              </div>
+            </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+            <form class="form">
+              <label>获得奖项</label>
+              <div class="form-group">
+                <textarea rows="8" style="width: 100%">
+                    获得了台湾、中国大陆、新加坡和马来西亚、日本与韩国，以及北美一些机构授予的许多流行歌手荣誉。在Channel V主办的全球华语音乐榜中榜上，从1994年至2002年刘德华共有10首歌曲入选榜中榜年度20大金曲，96至98年连续三届获得传媒推荐奖，1999年与2000年分别荣获跨世纪男歌手和最受欢迎歌手大奖。在亚洲七家华语电台共同举办的全球华语歌曲排行榜上，从2001年到2006年他共有6首歌曲入选排行榜20大金曲，并在2002年的第二届、2003年的第三届和2006年的第六届先后三次获得最受欢迎男歌手奖，至今为获该荣誉最多的男歌手。其他地区奖项还有：1990年代台湾民生报金曲龙虎榜多届最受欢迎歌手，1992年北京电视台的最受欢迎歌星奖，1993年上海电视台的最受欢迎天王和四川国际电视节最受欢迎歌星奖，1993年至1998年连续获日本杂志《Club香港仔》评选的全日本明星人气奖及最受欢迎外国歌手第一名，1993年韩国电视台评选的全亚洲最受欢迎男歌手，1994年加拿大多伦多美加华语电台至爱男歌手，94年、95年、98年、99年和2001年新加坡金曲奖最受欢迎男歌手，1995年泰国最受欢迎男歌手，1995年与1996年连续获得Channel V与美国Billboard杂志联合颁发的亚洲最受欢迎歌手奖，以及1997年澳洲中文广播电台评选的97年度南半球最受欢迎男歌手等等。
+                </textarea>
+              </div>
+            </form>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑版权信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-6">
+<form class="form">
+                <div class="">
+                  <label>
+                    权利人
+                  </label>
+                </div>
+                <div class="form-group">
+                  <select class="select2_group form-control" style="width:200px;">
+                    <option value="0">请选择权利人</option>
+                    <optgroup label="权利人">
+                      <option value="1">权利人1</option>
+                      <option value="2">权利人2</option>
+                      <option value="3">权利人3</option>
+                      <option value="4">权利人4</option>
+                    </optgroup>
+                    <optgroup label="权利组织/公司">
+                      <option value="111">版权公司1</option>
+                      <option value="222">版权公司2</option>
+                      <option value="333">版权公司3</option>
+                      <option value="444">版权公司4</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+
+
+<div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked"> 作曲权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比" value="100%">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> 作词权
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="权利比">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 表演权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked="checked"> 复制权
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="权利比" value="100%">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 邻接权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked="checked"> 原画权
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="权利比" value="100%">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 网络传播权
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="权利比">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+ 
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left"  data-dismiss="modal" data-toggle="modal" data-target="#exampleModal2" >编辑权利人</button>
+
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑版权人信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-6">
+<form class="form">
+                <div class="">
+                  <label>
+                    权利人
+                  </label>
+                </div>
+                <div class="form-group">
+                  <select class="select2_group form-control" style="width:200px;">
+                    <option value="0">请选择权利人</option>
+                    <optgroup label="权利人">
+                      <option value="1">权利人1</option>
+                      <option value="2">权利人2</option>
+                      <option value="3">权利人3</option>
+                      <option value="4">权利人4</option>
+                    </optgroup>
+                    <optgroup label="权利组织/公司">
+                      <option value="111">版权公司1</option>
+                      <option value="222">版权公司2</option>
+                      <option value="333">版权公司3</option>
+                      <option value="444">版权公司4</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="col-xs-6">
+                            <form class="form">
+              <div class="">
+                <label>
+                  期限
+                </label>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+              </div>
+            </form>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="">
+                <label>
+                  演唱者
+                </label>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              <form class="form">
+                <div class="">
+                  <label>
+                   作曲者
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+            <form class="form">
+              <div class="">
+                <label>
+                  作词者
+                </label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <script src="js/plugins/prettyfile/bootstrap-prettyfile.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+            $( 'input[type="file"]' ).prettyFile();
+
+            var config = {
+                '.chosen-select': {
+                    width: "100%"
+                },
+                '.chosen-select-deselect': {
+                    allow_single_deselect: true
+                },
+                '.chosen-select-no-single': {
+                    disable_search_threshold: 10
+                },
+                '.chosen-select-no-results': {
+                    no_results_text: 'Oops, nothing found!'
+                },
+                '.chosen-select-width': {
+                    width: "95%"
+                }
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+            }
+        });
+    </script>
+</body>
+
+</html>

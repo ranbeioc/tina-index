@@ -16,18 +16,70 @@
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
         <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
 
     <link href="css/style.css?v=4.1.0" rel="stylesheet">
-
+    <style type="text/css">
+        .tagslayer li{ margin:5px 5px 5px 5px; }
+    </style>
 </head>
 
 <body class="gray-bg">
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row row-sm text-center">
+                            
+                            <div class="col-sm-4">
+                                <div class="widget style1 blue-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-database fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 曲目总数 </span>
+                                            <h2 class="font-bold">58943</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget style1 navy-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-th-list fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 资源分类 </span>
+                                            <h2 class="font-bold">43</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="widget style1 lazur-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-tags fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 标记总数 </span>
+                                            <h2 class="font-bold">37845</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+           
+                        </div>
+                    </div>
+
+                </div>
+        <div class="row">
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>歌手列表</h5>
+                        <h5>资源列表</h5>
                         <div class="ibox-tools">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="typography.html#" aria-expanded="false">
                                  全部版本 <i class="fa fa-caret-down"></i>
@@ -122,9 +174,9 @@
                                                     <th>标题</th>
                                                     <th>歌手</th>
                                                     <th>入库日期</th>
-                                                    <th>所属分类</th>
+                                                    <th>所属分类（可多选）</th>
                                                     <th>权利人</th>
-                                                    <th>热度值</th>
+                                                    <th>标签</th>
                                                     <th>操作</th>
                                                 </tr>
                                             </thead>
@@ -145,7 +197,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -169,7 +221,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -193,7 +245,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -217,7 +269,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -241,7 +293,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -265,7 +317,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -289,7 +341,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -313,7 +365,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -337,7 +389,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -361,7 +413,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -385,7 +437,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -409,7 +461,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -433,7 +485,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -457,7 +509,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -481,7 +533,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -505,7 +557,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -529,7 +581,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -553,7 +605,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -577,7 +629,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -601,7 +653,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -625,7 +677,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -649,7 +701,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -673,7 +725,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -697,7 +749,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -721,7 +773,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -745,7 +797,7 @@
                                                     </select>
                                                     </td>
                                                     <td>太合音乐</td>
-                                                    <td>23556</td>
+                                                    <td><a href="#" class="btn btn-white btn-sm J_menuItem" data-toggle="modal" data-target="#exampleModal0"> 标签 </a></td>
                                                     <td>
                                                         <a href="mzk_dat.html" class="btn btn-white btn-sm J_menuItem"> 资源 </a>
                                                         <a href="#" class="btn btn-white btn-sm J_menuItem"> 数据 </a>
@@ -800,9 +852,8 @@
                 </div>
                 <div class="form-group">
                   <select class="select2_group form-control" style="width:200px;">
-                    <option value="0">请选择权利人</option>
                     <optgroup label="权利人">
-                      <option value="1">权利人1</option>
+                      <option value="1" selected>权利人1</option>
                       <option value="2">权利人2</option>
                       <option value="3">权利人3</option>
                       <option value="4">权利人4</option>
@@ -967,7 +1018,16 @@
               </form>
             </div>
             <div class="col-xs-6">
-              
+              <form class="form">
+              <div class="">
+                <label>
+                  期限
+                </label>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control autocomplete-custom-append" placeholder="">
+              </div>
+            </form>
             </div>
           </div>
         <div class="row">
@@ -1127,12 +1187,79 @@
 </div><!-- /.modal -->
 
 
+<div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑标签信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+                  <label>
+                    请选择添加标签
+                  </label>
+                <div class="input-group" >
+                    <select data-placeholder="" class="chosen-select" style="width:100%;">
+                        <option value="0">选择标签分类</option>
+                        <option value="1">标签分类1</option>
+                        <option value="2" selected>标签分类2</option>
+                        <option value="3">标签分类3</option>
+                        <option value="4">标签分类4</option>
+                        <option value="5">标签分类5</option>
+                        <option value="6">标签分类6</option>
+                        <option value="7">标签分类7</option>
+                        <option value="8">标签分类8</option>
+                    </select>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn btn-success">添加</button>
+                    </span>
+                </div>
+            </div>
+     
+          </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                  <label>
+                    已添加标签
+                  </label>
+                  <ul class="list-inline tagslayer">
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                      <li><span class="label label-success">标签分类 <i class="fa fa-times"></i></span></li>
+                  </ul>
+            </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
     <!-- 全局js -->
     <script src="js/jquery.min.js?v=2.1.4"></script>
     <script src="js/bootstrap.min.js?v=3.3.6"></script>
 
     <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
 
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
 
     <!-- Peity -->
     <script src="js/plugins/peity/jquery.peity.min.js"></script>
@@ -1197,6 +1324,28 @@
                     }
                 });
             });
+
+
+             var config = {
+                '.chosen-select': {
+                    width: "100%"
+                },
+                '.chosen-select-deselect': {
+                    allow_single_deselect: true
+                },
+                '.chosen-select-no-single': {
+                    disable_search_threshold: 10
+                },
+                '.chosen-select-no-results': {
+                    no_results_text: 'Oops, nothing found!'
+                },
+                '.chosen-select-width': {
+                    width: "95%"
+                }
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+            }
         });
     </script>
 
