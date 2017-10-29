@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - </title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>添加标签/分类</h5>
+                        <div class="ibox-tools">
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="signupForm">
+                           
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">标签/分类名称：</label>
+                                <div class="col-sm-8">
+                                    <input id="email" name="email" class="form-control" type="email" value="">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i>标签名不可重复</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">加入时间：</label>
+                                <div class="col-sm-8">
+                                    <input id="firstname" name="firstname" class="form-control" type="text" value="2017-10-29 21:21:42" readonly>
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 不可修改</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">所属平台</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control m-b" id="username" name="username" type="text" aria-required="true" aria-invalid="true" class="error">
+                                        <option>请选择所属平台</option>
+                                        <option value="1">全平台</option>
+                                        <option value="2">移动端</option>
+                                        <option value="3">电视端</option>
+                                        <option value="3">KTV</option>
+                                        <option value="4">智能硬件</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">所属版本</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control m-b" id="username" name="username" type="text" aria-required="true" aria-invalid="true" class="error">
+                                        <option>请选择所属版本</option>
+                                        <option value="1">统一版</option>
+                                        <option value="2">V1.0</option>
+                                        <option value="3">V2.0</option>
+                                        <option value="4">V3.0</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">标签说明：</label>
+                                <div class="col-sm-8">
+                                    <textarea id="ccomment" name="comment" class="form-control" required="" aria-required="true" rows="10"></textarea>
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入字符在300个以内</span>
+                                </div>
+                            </div>
+                            <!--div class="form-group">
+                                <div class="col-sm-8 col-sm-offset-3">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="checkbox" id="agree" name="agree"> 我已经认真阅读并同意《H+使用协议》
+                                        </label>
+                                    </div>
+                                </div>
+                            </div-->
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit">保存更改</button>
+                                    <button class="btn btn-white" type="submit">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>分类设置</h5>
+                            <div class="ibox-tools">
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <form class="form-horizontal m-t" id="signupForm">
+                                
+                                
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">设置分类
+                                        <br/><small class="text-navy">可多选</small>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称1</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" > <i></i> 分类名称2</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称3</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称4</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称5</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称6</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称7</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称8</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称9</label>
+                                        </div>
+                                        <div class="checkbox i-checks">
+                                            <label>
+                                                <input type="checkbox" value="" > <i></i> 分类名称10</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <button class="btn btn-primary" type="submit">保存更改</button>
+                                        <button class="btn btn-white" type="submit">取消</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+
+    <script src="js/demo/form-validate-demo.js"></script>
+    
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+</body>
+
+</html>
