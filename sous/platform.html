@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title> - 主页示例</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <style type="text/css">
+      .clients-list {
+          margin-top: 0;
+      }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row row-sm text-center">
+                           <div class="col-sm-4">
+                                <div class="widget style1 blue-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-mobile fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 移动端总数 </span>
+                                            <h2 class="font-bold">5</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget style1 navy-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-television fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 电视端总数 </span>
+                                            <h2 class="font-bold">11</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="widget style1 lazur-bg">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <i class="fa fa-cogs fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-8 text-right">
+                                            <span> 渠道总数 </span>
+                                            <h2 class="font-bold">26</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>平台管理列表 <small><button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-plus"></i> 添加平台</button> <button type="button" id="loading-example-btn" class="btn btn-success btn-xs"><i class="fa fa-plus"></i> 添加渠道</button></small></h5>
+                                <div class="ibox-tools">
+                                    <div class="ibox-tools">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ibox-content" style="border-top:none;">
+                               <div class="clients-list">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-globe"></i> 全平台项</a>
+                                </li>
+                                <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-mobile"></i> 移动端</a>
+                                </li>
+                                <li class=""><a data-toggle="tab" href="#tab-3"><i class="fa fa-television"></i> 电视端</a>
+                                </li>
+                                <li class=""><a data-toggle="tab" href="#tab-4"><i class="fa fa-microphone"></i> KTV</a>
+                                </li>
+                                <li class=""><a data-toggle="tab" href="#tab-5"><i class="fa fa-tablet"></i> 智能硬件</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>平台总分类名</th>
+                                                        <th>描述信息</th>
+                                                        <th>更新时间</th>
+                                                        <th>渠道总数</th>
+                                                        <th>版本总数</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>001</td>
+                                                        <td>移动端</td>
+                                                        <td>描述信息</td>
+                                                        </td>
+                                                        <td>2017-11-07 16:07:51
+                                                        </td>
+                                                        <td>5 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                        <td><span class="label label-primary">已启用</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>002</td>
+                                                        <td>电视端</td>
+                                                        <td>描述信息</td>
+                                                        </td>
+                                                        <td>2017-11-07 16:07:51
+                                                        </td>
+                                                        <td>11 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td>27 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已启用</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>003</td>
+                                                        <td>KTV</td>
+                                                        <td>描述信息</td>
+                                                        </td>
+                                                        <td>2017-11-07 16:07:51
+                                                        </td>
+                                                        <td>2 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td>6 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已启用</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>004</td>
+                                                        <td>智能硬件</td>
+                                                        <td>描述信息</td>
+                                                        </td>
+                                                        <td>2017-11-07 16:07:51
+                                                        </td>
+                                                        <td>4 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td>5 <a href="#" class="btn btn-white btn-sm"> 列表 </a></td>
+                                                        <td><span class="label label-primary">已启用</span>
+                                                        </td>
+                                                        <td class="project-actions">
+                                                            <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                            <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                              <thead>
+                                                  <tr>
+                                                      <th>#</th>
+                                                      <th>所属渠道编号</th>
+                                                      <th>子渠道名</th>
+                                                      <th>子渠道编号</th>
+                                                      <th>描述信息</th>
+                                                      <th>更新时间</th>
+                                                      <th>版本总数</th>
+                                                      <th>状态</th>
+                                                      <th>操作</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>iOS-iPhone</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>002</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>iOS-iPad</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>003</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-Phone</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-GooglePlay</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>005</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-VIVO</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-OPPO</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-Huawei</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-Xiaomi</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-Baidu</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-360</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-Tencent</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-001 </td>
+                                                      <td>Android-Wandoujia</td>
+                                                      <td>TLKG-00X </td>
+                                                      <td>描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+
+
+
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-3" class="tab-pane">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                              <thead>
+                                                  <tr>
+                                                      <th>#</th>
+                                                      <th>所属渠道编号</th>
+                                                      <th>渠道编名</th>
+                                                      <th>描述信息</th>
+                                                      <th>子渠道数</th>
+                                                      <th>更新时间</th>
+                                                      <th>版本总数</th>
+                                                      <th>状态</th>
+                                                      <th>操作</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>IPTV-联通</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>002</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>IPTV-电信</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>003</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>TCL</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>004</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>海尔</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>005</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>海信</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>006</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>创维</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>007</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>夏普</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>008</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>三星</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>008</td>
+                                                      <td>TLKG-002</td>
+                                                      <td>微鲸</td>
+                                                      <td>描述信息</td>
+                                                      <td>5 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal1"> 子编号 </a></td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+
+
+
+
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-4" class="tab-pane ">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>所属渠道编号</th>
+                                                        <th>子渠道编号</th>
+                                                        <th>描述信息</th>
+                                                        <th>更新时间</th>
+                                                        <th>版本总数</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-003</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>麦乐迪 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-003</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>好乐迪 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-003</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>钱柜 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-003</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>天上人间 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-003</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>夜总会 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-5" class="tab-pane">
+                                    <div class="full-height-scroll">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>所属渠道编号</th>
+                                                        <th>子渠道编号</th>
+                                                        <th>描述信息</th>
+                                                        <th>更新时间</th>
+                                                        <th>版本总数</th>
+                                                        <th>状态</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-004</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>一代麦克 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-004</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>二代麦克 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-004</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>三代麦克 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-004</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>单只麦克 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>001</td>
+                                                      <td>TLKG-004</td>
+                                                      <td>KTV-00X </td>
+                                                      <td>套装麦克 描述信息</td>
+                                                      </td>
+                                                      <td>2017-11-07 16:07:51
+                                                      </td>
+                                                      <td>10 <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#Modal2"> 列表 </a></td>
+                                                      <td><span class="label label-primary">已启用</span>
+                                                      </td>
+                                                      <td class="project-actions">
+                                                          <a href="#" class="btn btn-white btn-sm"> 数据 </a>
+                                                          <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                                                      </td>
+                                                  </tr>
+
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">渠道子编号列表</h4>
+          </div>
+          <div class="modal-body">
+              <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>渠道序号</th>
+                        <th>渠道编号</th>
+                        <th>渠道说明</th>
+                        <th>创建时间</th>
+                        <th>创建人</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            01
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                           渠道子项目 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            01
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                           渠道子项目 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            01
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                           渠道子项目 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            01
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                           渠道子项目 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            01
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                           渠道子项目 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary">保存</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">渠道子版本列表</h4>
+          </div>
+          <div class="modal-body">
+              <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>版本序号</th>
+                        <th>所属渠道编号</th>
+                        <th>版本号</th>
+                        <th>版本说明</th>
+                        <th>创建时间</th>
+                        <th>创建人</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            01
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                            V1.0
+                        </td>
+                        <td>
+                           渠道子版本 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            02
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                            V2.0
+                        </td>
+                        <td>
+                           渠道子版本 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            03
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                            V3.0
+                        </td>
+                        <td>
+                           渠道子版本 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            04
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                            V4.0
+                        </td>
+                        <td>
+                           渠道子版本 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            05
+                        </td>
+                        <td>
+                            TLKG-00X
+                        </td>
+                        <td>
+                            V5.0
+                        </td>
+                        <td>
+                           渠道子版本 说明信息
+                        </td>
+                        <td>
+                            2017-10-24 04:47:58
+                        </td>
+                        <td>
+                           曲库管理员A
+                        </td>
+                        <td>
+                           <a class="btn btn-danger btn-sm demo5"> 编辑 </a>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary">保存</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+        <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+
+
+           $('.demo1').click(function () {
+                swal({
+                    title: "您确定要启用该项目吗？",
+                    text: "启用后将可被标记使用，请查看详细资料后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "启用！",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("启用成功！", "您已经通过了该结算申请。", "success");
+                    } else {
+                        swal("已撤销操作", "您取消了该操作！", "error");
+                    }
+                });
+            });
+
+             $('.demo2').click(function () {
+                swal({
+                    title: "您确定要停用该项目吗？",
+                    text: "停用后将无法标记本栏目，请确定后再操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "停用",
+                    cancelButtonText: "我再想想…",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal({
+                          title: "请输入停用理由",
+                          text: "请输入有关描述信息",
+                          type: "input",
+                          showCancelButton: true,
+                          closeOnConfirm: false,
+                          confirmButtonColor: "#DD6B55",
+                          confirmButtonText: "停用！",
+                          cancelButtonText: "取消",
+                          inputPlaceholder: "请输入有关描述信息"
+                        },
+                        function(inputValue){
+                          if (inputValue === false) return false;
+
+                          if (inputValue === "") {
+                            swal.showInputError("必须输入有关描述信息");
+                            return false
+                          }
+
+                          swal("停用成功！", "我们将在处理成功后会有邮件通知", "success");
+                        });
+
+                    } else {
+                        swal("已取消操作", "您取消了下载操作！", "error");
+                    }
+                });
+            });
+
+
+});
+    </script>
+</body>
+
+</html>
